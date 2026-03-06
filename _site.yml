@@ -5,16 +5,23 @@ navbar:
   right:
     - text: 'Projects' ## setting up a drop down menu
       menu:
-        - text: 'Plotly'
+        - text: 'MACS Final'
           href: text.html
-        - text: 'Shiny/Tableau'
+        - text: 'Global Fertility Drivers'
           href: text2.html
     - text: "About"
+     menu:
+        - text: 'Resume'
+          href: text.html
+        - text: 'CV'
+          href: text2.html
       href: about.html
     - icon: fa-github fa-lg
       href: http://github.com/\
-    - text: "new example"
-      href: veronica.html     
+    - text: "Writing Samples"
+      href: veronica.html   
+
+      
   output: 
   html_document:
     theme: united
