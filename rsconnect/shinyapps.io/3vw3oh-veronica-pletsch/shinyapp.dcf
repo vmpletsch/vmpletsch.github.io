@@ -1,0 +1,12 @@
+name: shinyapp
+title: shinyapp
+username: 3vw3oh-veronica-pletsch
+account: 3vw3oh-veronica-pletsch
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 16801199
+bundleId: 11673474
+url: https://3vw3oh-veronica-pletsch.shinyapps.io/shinyapp/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

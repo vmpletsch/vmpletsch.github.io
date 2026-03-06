@@ -1,0 +1,26 @@
+{
+    "id": "35E7CF20",
+    "path": "~/shinyapp/app.R",
+    "project_path": "app.R",
+    "type": "r_source",
+    "hash": "4012937134",
+    "contents": "",
+    "dirty": false,
+    "created": 1772480355771.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "168,29",
+        "scrollLine": "73"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1772827263,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1772827263645,
+    "read_only": false,
+    "read_only_alternatives": []
+}
