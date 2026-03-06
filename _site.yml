@@ -10,19 +10,17 @@ navbar:
         - text: 'Global Fertility Drivers'
           href: text2.html
     - text: "About"
-     menu:
+      menu:
         - text: 'Resume'
           href: text.html
         - text: 'CV'
           href: text2.html
-      href: about.html
-    - icon: fa-github fa-lg
-      href: http://github.com/\
     - text: "Writing Samples"
-      href: veronica.html   
+      href: veronica.html  
+    - icon: fa-github fa-lg
+      href: http://github.com/
 
-      
-  output: 
+output: 
   html_document:
     theme: darkly
     toc: yes
