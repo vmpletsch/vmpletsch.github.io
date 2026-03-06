@@ -24,7 +24,7 @@ navbar:
       
   output: 
   html_document:
-    theme: united
+    theme: darkly
     toc: yes
     toc_float:
       collapsed: false
