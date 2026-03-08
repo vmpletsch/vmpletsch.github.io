@@ -1,5 +1,0 @@
----
-title: "veronica"
-output: html_document
----
-

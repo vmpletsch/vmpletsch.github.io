@@ -1,0 +1,12 @@
+---
+title: "CV"
+output:
+  html_document:
+    toc: false
+---
+
+<a href="cv.pdf" class="btn btn-primary" download>Download CV (PDF)</a>
+
+<hr>
+
+<iframe src="cv.pdf" width="100%" height="1100px" style="border: none;"></iframe>

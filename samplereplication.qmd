@@ -1,0 +1,12 @@
+---
+title: "Social Science Replication Study"
+output:
+  html_document:
+    toc: false
+---
+
+<a href="sample_replication.pdf" class="btn btn-primary" download>Download PDF</a>
+
+<hr>
+
+<iframe src="sample_replication.pdf" width="100%" height="1100px" style="border: none;"></iframe>
