@@ -1,0 +1,21 @@
+name: "Student, Computational Social Scientist"
+output_dir: "."
+navbar:
+  title: "Home"
+  right:
+    - text: 'Projects' ## setting up a drop down menu
+      menu:
+        - text: 'Plotly'
+          href: text.html
+        - text: 'Shiny/Tableau'
+          href: text2.html
+    - text: "About"
+      href: about.html
+    - icon: fa-github fa-lg
+      href: http://github.com/
+output: 
+  html_document:
+    theme: united
+    toc: yes
+    toc_float:
+      collapsed: false

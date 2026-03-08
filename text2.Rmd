@@ -1,0 +1,10 @@
+# Including Tableau and Shiny
+
+## Tableau
+<iframe src="https://public.tableau.com/views/macs40700/BabyNamesDashboard?:showVizHome=no&:embed=true"
+ width="980px" height="900px"></iframe>
+
+## Shiny
+
+
+<iframe src="https://jclip.shinyapps.io/baby-names/" style="border: 1px solid #AAA; width: 800px; height: 760px"></iframe>

@@ -1,0 +1,16 @@
+# You can add stuff here if you want: Plotly
+
+Look I have a plotly plot here! Sample diamond data by cut. 
+
+```{r, message = F, echo = F, warning = F}
+library(tidyverse)
+library(plotly)
+data(diamonds)
+p <- ggplot(data = diamonds, aes(x = carat, y = price)) +
+  geom_point(aes(text = paste("clarity:", clarity), color = clarity), size = 0.5) +
+  geom_smooth(aes(colour = cut, fill = cut)) + facet_wrap(~ cut) +
+  guides(color = "none")
+
+ggplotly(p)
+
+```
