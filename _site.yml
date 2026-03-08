@@ -11,17 +11,17 @@ website:
       - text: "Projects"
         menu:
           - text: "MACS Final"
-            href: text.rmd
+            href: text.Rmd
           - text: "Global Fertility Drivers"
-            href: text2.rmd
+            href: text2.Rmd
       - text: "About"
         menu:
           - text: "Resume"
-            href: resume.rmd
+            href: resume.Rmd
           - text: "CV"
-            href: cv.rmd
+            href: cv.Rmd
       - text: "Writing Samples"
-        href: veronica.rmd
+        href: veronica.Rmd
       - icon: github
         href: https://github.com/vmpletsch
 
