@@ -1,0 +1,18 @@
+---
+title: "Writing Samples"
+listing:
+  contents: Writing_Samples/projects
+  type: grid
+  categories: true 
+  sort-ui: true         
+  filter-ui: true  
+  grid-item-align: center    
+  image-height: "250px" 
+  grid-columns: 3      
+  fields: [image, date, title, categories]
+toc: false
+page-layout: full
+---
+
+## My Latest Work
+

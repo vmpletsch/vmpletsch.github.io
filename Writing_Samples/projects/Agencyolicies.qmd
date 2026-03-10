@@ -1,0 +1,11 @@
+---
+title: "The Impact of Agency Policies on the Level of Force Used by Officers"
+categories: ["Quantitative Analysis"]
+date: "2025-03-19"
+image: "../images/sample_screenshot.png"
+toc: false
+page-layout: full
+---
+<iframe src="../sample_agency_policies.pdf" width="100%" height="800px" style="border: none;">
+  This browser does not support PDFs. Please download the PDF to view it.
+</iframe>

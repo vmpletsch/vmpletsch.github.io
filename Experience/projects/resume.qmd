@@ -1,0 +1,6 @@
+---
+title: "Resume"
+image: "../images/resume_screenshot.png"
+---
+# Your actual project content goes here...
+

@@ -1,0 +1,38 @@
+project:
+  type: website
+  output-dir: .
+
+website:
+  title: "Veronica Pletsch"
+  navbar:
+    background: transparent
+    search: true
+    right:
+      - text: "Projects"
+        href: projects.qmd
+      - text: "Experience"
+        href: experience.qmd
+      - text: "Writing Samples"
+        href: writingsamplese.qmd
+    
+  page-footer:
+    right:
+      - icon: github
+        href: https://github.com/vmpletsch
+      - icon: linkedin
+        href: http://linkedin.com/in/veronica-pletsch-a49331100
+      - icon: envelope
+        href: vmpletsch@gmail.com
+
+format:
+  html:
+    embed-resources: true
+    theme: cosmo
+    css: 
+      - custom.css
+    toc: true
+    toc-location: left
+    google-fonts:
+      - family: Fraunces
+      - family: Montserrat
+      - family: DM Serif Display

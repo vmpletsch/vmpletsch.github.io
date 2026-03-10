@@ -1,0 +1,95 @@
+---
+title: "Experience"
+page-layout: full
+toc: false
+format:
+  html:
+    css: custom.css
+---
+
+<div class="d-flex justify-content-center gap-3 mb-5" style="margin-top: 30px;">
+  <a href="Experience/resume.pdf" target="_blank" class="btn btn-primary download-btn">
+    <i class="bi bi-file-earmark-pdf"></i> Download Resume
+  </a>
+  <a href="V_Pletsch_CV.pdf" target="_blank" class="btn btn-outline-primary download-btn">
+    <i class="bi bi-file-earmark-person"></i> Download CV
+  </a>
+</div>
+
+::: {.timeline}
+  
+::: {.timeline-item}
+::: {.timeline-dot}
+:::
+::: {.timeline-content}
+### Research Associate
+#### NORC at the University of Chicago, Public Health Department
+
+* Co-authored award-winning grant proposals.
+* Co-designed survey.
+* Wrangled largescale qualitative and quantitative datasets in SPSS, NVivo, and MAXQDA.
+:::
+:::
+
+::: {.timeline-item}
+::: {.timeline-dot}
+:::
+::: {.timeline-content}
+### Graduate Research Assistant
+#### NORC at the University of Chicago, The Bridge
+
+* Researched hierarchy formation and its correlation with socioeconomic status.
+* Assisted PhD candidates in the early development of an original study on the misattribution of arousal.
+
+:::
+:::
+
+::: {.timeline-item}
+::: {.timeline-dot}
+:::
+::: {.timeline-content}
+### Undergraduate Researcher
+#### Ich Und Du Lab at DePaul University
+
+* Interviewed 20 participants for the rehabilitation of previously incarcerated LGBTQ+IA individuals study.
+* Quantitative data analysis using STATA for the National Social Life, Health and Aging Project (NSHAP) and the High School and Beyond (HSB) Project, both focused on aging and geriatric populations
+
+:::
+:::
+
+::: {.timeline-item}
+::: {.timeline-dot}
+:::
+::: {.timeline-content}
+### Research Intern
+####  Fonselp, Buenos Aires
+
+* Conducted partnership outreach, recruiting international nongovernmental organizations and corporations to invest in local Latin American communities.
+
+:::
+:::
+
+::: {.timeline-item}
+::: {.timeline-dot}
+:::
+::: {.timeline-content}
+### Research Intern
+####  Junior Achievement, Buenos Aires
+
+* Conducted partnership outreach, recruiting international nongovernmental organizations and corporations to invest in local Latin American communities.
+
+:::
+:::
+
+::: {.timeline-item}
+::: {.timeline-dot}
+:::
+::: {.timeline-content}
+### Policy Intern
+####  Chicago Ward Alderman
+
+* Organized Town Hall meetings between the Alderman and constituents.
+* Drafted policy memos, took notes for city council meetings, prepped materials for meetings between the Alderman and community organizations and local businesses.
+
+:::
+:::

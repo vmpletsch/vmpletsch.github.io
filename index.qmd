@@ -1,40 +1,57 @@
 ---
 page-layout: full
+toc: false
 format: 
   html:
-    css: vistales.css
+    css: custom.css
 ---
 
-::: {.index-page}
-<div class="splash-container">
-  <div class="splash-text text-left" id="text-left">Hi, I'm</div>
-  <div class="splash-text text-right" id="text-right">Veronica</div>
-  <div class="splash-text" id="combined">Hi, I'm Veronica</div>
-  
-  <div class="scroll-indicator">
-    <span>Scroll to Explore</span><br>
-    <i class="bi bi-chevron-down"></i>
-  </div>
+::: {style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; max-width: 800px; margin: 0 auto; width: 100%;"}
+
+<h1 class="tracking-in-expand" style="font-size: 100px; margin-bottom: 20px; font-family: 'DM Serif Display', serif; text-align: center; width: 100%;">Veronica Pletsch</h1>
+
+<h2 style="text-align: center; width: 100%; margin-bottom: 15px;">Welcome to my portfolio</h2>
+
+<p style="text-align: center; width: 100%; font-size: 1.2rem;">Data scientist and social science researcher.</p>
+
+<div style="margin-top: 50px;">
+  <a href="#testimonials" class="scroll-down-arrow">
+    <i class="bi bi-chevron-down" style="font-size: 3rem; color: #881ca3;"></i>
+  </a>
 </div>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const leftText = document.getElementById('text-left');
-    const rightText = document.getElementById('text-right');
-    const combinedText = document.getElementById('combined');
-
-    // When the right text animation ends, merge them
-    rightText.addEventListener('animationend', function() {
-      leftText.style.display = 'none';
-      rightText.style.display = 'none';
-      combinedText.classList.add('show');
-    });
-  });
-</script>
 :::
 
-<div style="padding: 100px 20px; text-align: center; max-width: 800px; margin: 0 auto;">
-  ## Welcome to my portfolio
-  
-  I'm a data scientist and researcher focused on finding the stories behind the numbers. Explore my work using the navigation above.
+::: {#testimonials class="testimonial-container"}
+## Testimonials
+
+<p class="testimonial-quote">"Not only is she a talented quantitative and qualitative social researcher, but she never skips the opportunity to help an old lady cross the street."</p>
+<p class="testimonial-author">— my mom, a pretty cool lady</p>
+
+<p class="testimonial-quote">"A terrific research associate, always eager to grow and be challenged. (What I imagine was said in the letter of recommendation wrote for my UChicago application... alas I waived my right to read it. But hey, I got accepted so it had to be good.) "</p>
+<p class="testimonial-author">—  former manager, NORC</p>
+
+<p class="testimonial-quote">"That kid's got gumption, no social or financial barrier has ever stopped her, but boy did they try."</p>
+<p class="testimonial-author">— Veronica Pletsch (me), Researcher</p>
+
+<div style="margin-top: 50px;">
+  <a href="#about" class="scroll-down-arrow">
+    <i class="bi bi-chevron-down" style="font-size: 3rem; color: #881ca3;"></i>
+  </a>
 </div>
+:::
+
+::: {#about style="padding: 100px 20px; text-align: left; max-width: 800px; margin: 0 auto; min-height: 60vh;"}
+## About Me
+
+Hey there! I'm Veronica, when I'm not giving myself musculoskeletal issues and heart palpitations from being hunched over my computer doing research with 400 milligrams of caffeine in my system, I like to dabble in my hobbies. I love playing with my cat Sabrina who is exactly half a rice cooker big and hit the gym as an amateur body builder who can totally deadlift 675lbs.
+
+Thanks for stopping by! While you're here, please explore my recent research projects, writing samples, and while you're at it, take a PDF copy of my resume as a souvenir of your trip here.
+
+::: {layout-ncol=3 style="margin-top: 40px;"}
+![Lil Mama Sabrina](images/sabrina.png){.about-img}
+
+![Me!](images/headshot.png){.about-img}
+
+![Deadlifting me! Which is definitely me and definitely not bodybuilder Bradly Martin...](images/deadlifting.png){.about-img}
+:::
+:::

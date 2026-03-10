@@ -1,0 +1,7 @@
+---
+title: "Curriculum Vitae"
+image: "../images/CV_screenshot.png"
+---
+# Your actual project content goes here...
+
+
