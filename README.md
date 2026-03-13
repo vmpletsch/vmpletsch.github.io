@@ -1,10 +1,14 @@
 # Veronica Pletsch - Professional Portfolio & Data Visualizations
 
-This repository contains the source code for my professional portfolio and personal website, built using [Quarto](https://quarto.org/) and [R](https://www.r-project.org/). It features a collection of data visualizations, writing samples, and professional experience.
+This repository contains the source code used to create my professional website built using Quarto (qmd files) in R.
 
 ## Project Description
 
-The website serves as a central hub for my research projects, data visualization examples, and professional background. It includes interactive plots built with `ggplot2` and `plotly` to explore demographic and social science datasets (such as global income, fertility rates, gender equality indices, and religious affiliation). 
+The main project on my website is titled 'AI sentiment' and  aims to analyze, interactively visualize whether AI sentiments are socio-economically reinforced.
+
+## Website Description
+
+My professional website includes my data visualizations project, resume, and writing samples.
 
 ## Getting Started
 
@@ -13,41 +17,21 @@ To run this code and build the website locally on your own computer, follow the 
 ### Prerequisites & Software
 
 You will need to install the following software:
-1. **[R](https://cran.r-project.org/)**: The programming language used for data processing and visualizations.
-2. **[RStudio](https://posit.co/download/rstudio-desktop/)** (Recommended): An IDE that makes working with R and Quarto seamless.
-3. **[Quarto CLI](https://quarto.org/docs/get-started/)**: The open-source scientific and technical publishing system used to render the site.
+1. RStudio (or alternatively PyCharm if using Python instead of R) 
+2. Github repository linked with a personal website (naming convention: githubusername.github.io)
+3. Quarto to render the site
 
 ### Required R Packages
 
-You must install the necessary R packages before rendering the site. Open your R console and run the following command:
+You must install the necessary R packages before rendering the site:
 
-```R
-install.packages(c("plotly", "ggplot2", "scales"))
-```
+1. Plotly
+2. Ggplot2
+3. Scales
+4. Shiny
+
 
 ### Data
 
-All necessary dataset files are included directly in this repository (e.g., `gapminder_master.csv`, `gendereq_idea.csv`, `ppp.csv`, `religion.csv`). You do not need to download or obtain them separately.
+All datasets files are included in this repository (e.g., `gapminder_master.csv`, `gendereq_idea.csv`, `ppp.csv`, `religion.csv`). However, if desired you can use any dataset of your choice.
 
-### Execution Instructions
-
-1. **Clone or Download the Repository**:
-   Download this repository to your local machine and navigate into the project folder.
-
-2. **Open the Project**:
-   Open the project folder in RStudio.
-
-3. **Render the Website**:
-   To render and preview the Quarto website locally, use one of the following methods:
-   - **In RStudio**: Open any `.qmd` file (e.g., `index.qmd`) and click the **Render** button at the top of the editor.
-   - **Terminal / Command Line**: Open your terminal, navigate to the project directory, and run:
-     ```bash
-     quarto preview
-     ```
-     This will build the site and open a live preview in your default web browser.
-
-   To build the final static HTML files for deployment, run:
-   ```bash
-   quarto render
-   ```
-   The compiled files will be output to the `docs/` directory, as configured in the `_quarto.yml` file.
