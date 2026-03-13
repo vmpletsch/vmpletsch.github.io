@@ -1,0 +1,16 @@
+---
+title: "AI Sentiment"
+subtitle: 'Dissecting Public Sentiment on AI by Demographics'
+categories: ["Shiny"]
+date: "2026-03-11"
+image: "../images/ai_shiny.png"
+toc: false
+page-layout: full
+---
+<div class="shiny-iframe-container" style="width: 100%; margin-top: 20px; overflow: auto;">
+  <object data="https://3vw3oh-veronica-pletsch.shinyapps.io/FallFinalRedo/" type="text/html" width="100%" height="1600px" style="border: none; width: 100%; min-width: 100%; overflow: auto;">
+    This browser does not support embedding external pages. Please visit the app directly: <a href="https://3vw3oh-veronica-pletsch.shinyapps.io/FallFinalRedo/>https://3vw3oh-veronica-pletsch.shinyapps.io/FallFinalRedo/</a>
+  </object>
+</div>
+
+

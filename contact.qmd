@@ -1,0 +1,29 @@
+---
+title: ""
+page-layout: full
+format: 
+  html:
+    css: custom.css
+toc: false
+---
+
+<div style="text-align: center; margin-bottom: 50px;">
+  ![](images/Me.png){width="60%" style="border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"}
+</div>
+
+::: {layout-ncol=3 style="text-align: center;"}
+::: {#linkedin}
+[<i class="bi bi-linkedin" style="font-size: 3rem; color:  #fa70ff;"></i>](https://www.linkedin.com/in/veronica-pletsch-a49331100/)
+<br>**LinkedIn**
+:::
+
+::: {#github}
+[<i class="bi bi-github" style="font-size: 3rem; color: #fa70ff;"></i>](https://github.com/vmpletsch)
+<br>**GitHub**
+:::
+
+::: {#email}
+[<i class="bi bi-envelope-fill" style="font-size: 3rem; color:  #fa70ff;"></i>](mailto:vmpletsch@gmail.com)
+<br>**Email**
+:::
+:::
