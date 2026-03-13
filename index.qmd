@@ -14,7 +14,7 @@ format:
 
 <h2 style="text-align: center; width: 100%; margin-bottom: 15px;">Welcome to my portfolio</h2>
 
-<p style="text-align: center; width: 100%; font-size: 1.2rem;">Data scientist and social science researcher.</p>
+<p style="text-align: center; width: 100%; font-size: 1.2rem;">Data scientist | Social Science Researcher</p>
 
 <div style="margin-top: 50px;">
   <a href="#testimonials" class="scroll-down-arrow">
@@ -49,7 +49,7 @@ Hey there! I'm Veronica, when I'm not giving myself musculoskeletal issues and h
 
 Thanks for stopping by! While you're here, please explore my recent research projects, writing samples, and while you're at it, take a PDF copy of my resume as a souvenir of your trip here.
 
-::: {layout-ncol=3 style="margin-top: 40px;"}
+::: {layout-ncol=2 style="margin-top: 40px; center;"}
 ![Lil Mama Sabrina](images/sabrina.png){.about-img}
 
 
