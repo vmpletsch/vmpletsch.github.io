@@ -1,21 +1,27 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - resume.pdf
+    - V_Pletsch_CV.pdf
 
 website:
-  title: "Veronica Pletsch"
+  title: "Homepage"
   navbar:
     background: transparent
     search: true
     right:
       - text: "Projects"
         href: projects.qmd
-      - text: "Experience"
+      - text: "Resume"
         href: experience.qmd
       - text: "Writing Samples"
         href: writingsamplese.qmd
+      - text: "Contact"
+        href: contact.qmd
     
   page-footer:
+    left: "<div id='footer'></div>"
     right:
       - icon: github
         href: https://github.com/vmpletsch

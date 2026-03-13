@@ -6,13 +6,13 @@
 
 /* Change navbar link text color */
 .navbar-nav .nav-link {
-  color: #d8e5ff;
+  color: #e8d5f8;
   /* Text color */
 }
 
 /* Change navbar link text color on hover */
 .navbar-nav .nav-link:hover {
-  color: #d8e5ff;
+  color: #e8d5f8;
   /* Text color when hovering */
 }
 
@@ -368,7 +368,8 @@ html {
 .timeline-dot {
   position: absolute;
   left: 14px;
-  top: 5px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 16px;
   height: 16px;
   border-radius: 50%;

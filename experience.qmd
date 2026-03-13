@@ -1,5 +1,5 @@
 ---
-title: "Experience"
+title: ""
 page-layout: full
 toc: false
 format:
@@ -8,7 +8,7 @@ format:
 ---
 
 <div class="d-flex justify-content-center gap-3 mb-5" style="margin-top: 30px;">
-  <a href="Experience/resume.pdf" target="_blank" class="btn btn-primary download-btn">
+  <a href="resume.pdf" target="_blank" class="btn btn-primary download-btn">
     <i class="bi bi-file-earmark-pdf"></i> Download Resume
   </a>
   <a href="V_Pletsch_CV.pdf" target="_blank" class="btn btn-outline-primary download-btn">

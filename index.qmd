@@ -8,7 +8,9 @@ format:
 
 ::: {style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; max-width: 800px; margin: 0 auto; width: 100%;"}
 
-<h1 class="tracking-in-expand" style="font-size: 100px; margin-bottom: 20px; font-family: 'DM Serif Display', serif; text-align: center; width: 100%;">Veronica Pletsch</h1>
+<h1 class="tracking-in-expand" style="font-size: 100px; margin-bottom: -30px; line-height: 1; font-family: 'DM Serif Display', serif; text-align: center; width: 100%;">Veronica Pletsch</h1>
+
+![](images/headshot.png){.about-img width="30%" fig-align="center"}
 
 <h2 style="text-align: center; width: 100%; margin-bottom: 15px;">Welcome to my portfolio</h2>
 
@@ -43,15 +45,14 @@ format:
 ::: {#about style="padding: 100px 20px; text-align: left; max-width: 800px; margin: 0 auto; min-height: 60vh;"}
 ## About Me
 
-Hey there! I'm Veronica, when I'm not giving myself musculoskeletal issues and heart palpitations from being hunched over my computer doing research with 400 milligrams of caffeine in my system, I like to dabble in my hobbies. I love playing with my cat Sabrina who is exactly half a rice cooker big and hit the gym as an amateur body builder who can totally deadlift 675lbs.
+Hey there! I'm Veronica, when I'm not giving myself musculoskeletal issues and heart palpitations from being hunched over my computer doing research with 400 milligrams of caffeine in my system, I like to dabble in my hobbies. I love playing with my cat Sabrina who is the size of exactly half a rice cooker and hit the gym as an amateur body builder who can totally deadlift 675lbs.
 
 Thanks for stopping by! While you're here, please explore my recent research projects, writing samples, and while you're at it, take a PDF copy of my resume as a souvenir of your trip here.
 
 ::: {layout-ncol=3 style="margin-top: 40px;"}
 ![Lil Mama Sabrina](images/sabrina.png){.about-img}
 
-![Me!](images/headshot.png){.about-img}
 
-![Deadlifting me! Which is definitely me and definitely not bodybuilder Bradly Martin...](images/deadlifting.png){.about-img}
+![Definitely me deadlifting and definitely not just my face over bodybuilder Bradley Martyn...](images/deadlifting.png){.about-img}
 :::
 :::
