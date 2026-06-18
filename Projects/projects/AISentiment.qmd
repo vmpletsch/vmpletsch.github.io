@@ -3,7 +3,7 @@ title: "AI Sentiment"
 subtitle: 'Dissecting Public Sentiment on AI by Demographics'
 categories: ["Shiny"]
 date: "2026-03-11"
-image: "../images/ai_shiny.png"
+image: "../../previews/Project_2.png"
 toc: false
 page-layout: full
 ---

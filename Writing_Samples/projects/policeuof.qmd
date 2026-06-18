@@ -2,7 +2,7 @@
 title: "The Landscape of Data Recording and Reporting for Use of Force and Violence Against Officer Incidents: Insights from Command Staff and Officer Interviews and Focus Groups in the U.S."
 categories: ["Mixed-Methods Analysis"]
 date: ""
-image: "../images/policeuof_screenshot.png"
+image: "../../previews/Writingsample_3.png"
 toc: false
 page-layout: full
 ---

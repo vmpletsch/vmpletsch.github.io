@@ -2,7 +2,7 @@
 title: "The Impact of Agency Policies on the Level of Force Used by Officers"
 categories: ["Quantitative Analysis"]
 date: "2025-03-19"
-image: "../images/sample_screenshot.png"
+image: "../../previews/Writingsample_2.png"
 toc: false
 page-layout: full
 ---

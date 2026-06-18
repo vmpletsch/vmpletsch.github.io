@@ -11,14 +11,16 @@ website:
     background: transparent
     search: true
     right:
+      - text: "Contact"
+        href: contact.qmd
+      - text: "Presentations"
+        href: presentations.qmd
       - text: "Projects"
         href: projects.qmd
       - text: "Resume"
         href: experience.qmd
       - text: "Writing Samples"
         href: writingsamplese.qmd
-      - text: "Contact"
-        href: contact.qmd
     
   page-footer:
     left: "<div id='footer'></div>"

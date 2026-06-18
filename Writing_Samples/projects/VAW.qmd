@@ -2,7 +2,7 @@
 title: "Trauma-Informed Approaches to Campus Sexual Assault Response"
 categories: ["Mixed-Methods Analysis"]
 date: "2026-02-26"
-image: "../images/VAW_screenshot.png"
+image: "../../previews/Writingsample_1.png"
 toc: false
 page-layout: full
 ---

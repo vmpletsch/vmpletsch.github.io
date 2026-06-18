@@ -10,11 +10,11 @@ format:
 
 <h1 class="tracking-in-expand" style="font-size: 100px; margin-bottom: -30px; line-height: 1; font-family: 'DM Serif Display', serif; text-align: center; width: 100%;">Veronica Pletsch</h1>
 
-![](images/headshot.png){.about-img width="30%" fig-align="center"}
+![](images/picture.png){.about-img width="30%" fig-align="center"}
 
 <h2 style="text-align: center; width: 100%; margin-bottom: 15px;">Welcome to my portfolio</h2>
 
-<p style="text-align: center; width: 100%; font-size: 1.2rem;">Data scientist | Social Science Researcher</p>
+<p style="text-align: center; width: 100%; font-size: 1.2rem;">Data Scientist | Social Science Researcher</p>
 
 <div style="margin-top: 50px;">
   <a href="#testimonials" class="scroll-down-arrow">
@@ -26,14 +26,14 @@ format:
 ::: {#testimonials class="testimonial-container"}
 ## Testimonials
 
+<p class="testimonial-quote">"She regularly asks questions, is interested in learning new skills and methods for completing tasks and has asked for feedback on how she can grow. She is an active participant in her own growth and development.” </p>
+<p class="testimonial-author">—  former manager, NORC (performance review feedback)</p>
+
+<p class="testimonial-quote">"Veronica is a great team member! Her quality of work is consistently very high, and I have been impressed with how quickly she has learned new skills since starting at NORC. She asks very thoughtful questions to understand the “why” of tasks, which results in higher quality of work because she understands the project and project needs in depth."</p>
+<p class="testimonial-author">— former project director, NORC (performance review feedback)</p>
+
 <p class="testimonial-quote">"Not only is she a talented quantitative and qualitative social researcher, but she never skips the opportunity to help an old lady cross the street."</p>
 <p class="testimonial-author">— my mom, a pretty cool lady</p>
-
-<p class="testimonial-quote">"A terrific research associate, always eager to grow and be challenged. (What I imagine was said in the letter of recommendation wrote for my UChicago application... alas I waived my right to read it. But hey, I got accepted so it had to be good.) "</p>
-<p class="testimonial-author">—  former manager, NORC</p>
-
-<p class="testimonial-quote">"That kid's got gumption, no social or financial barrier has ever stopped her, but boy did they try."</p>
-<p class="testimonial-author">— Veronica Pletsch (me), Researcher</p>
 
 <div style="margin-top: 50px;">
   <a href="#about" class="scroll-down-arrow">

@@ -1,0 +1,18 @@
+---
+title: "Presentations"
+listing:
+  contents: Presentations
+  type: grid
+  sort-ui: true         
+  filter-ui: true     
+  grid-columns: 3      
+  categories: true  
+  grid-item-align: center 
+  image-height: "250px" 
+  fields: [image, date, title, subtitle, categories]
+toc: false
+page-layout: full
+
+---
+
+## A gallery of my presentations. 

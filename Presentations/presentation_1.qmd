@@ -1,0 +1,11 @@
+---
+title: "Prevelance of Lifetime Indirect and Direct Firearm Violence, Victimization, and Perpetration."
+subtitle: "Coming Soon!"
+categories: ["Undergrad"]
+date: "2021-11-14"
+image: "../previews/Presentation_1.png"
+toc: false
+page-layout: full
+---
+
+xxx

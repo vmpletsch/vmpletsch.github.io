@@ -3,7 +3,7 @@ title: "The Severity of War"
 subtitle: "A Longitudinal Analysis"
 categories: ["Power Law"]
 date: "2026-01-21"
-image: "../images/problemset_screenshot.png"
+image: "../../previews/Projects_6.png"
 toc: false
 page-layout: full
 ---

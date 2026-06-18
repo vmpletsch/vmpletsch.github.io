@@ -3,7 +3,7 @@ title: "Nomenclature Trends"
 subtitle: "A Longitudinal Study of Veronica"
 categories: ["Tableau"]
 date: "2026-02-16"
-image: "../images/tableaudash_screenshot.png"
+image: "../../previews/Projects_4.png"
 toc: false
 page-layout: full
 ---

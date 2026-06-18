@@ -1,0 +1,11 @@
+---
+title: "A Comparison of Social Hierarchy Amongst Primates"
+subtitle: "Coming Soon!"
+categories: ["Grad"]
+date: "2026-05-22"
+image: "../previews/Presentation_2.png"
+toc: false
+page-layout: full
+---
+
+xxx

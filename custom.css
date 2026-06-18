@@ -438,3 +438,18 @@ html {
   font-weight: bold;
   margin-bottom: 40px;
 }
+
+/* Force the navbar homepage title to always remain black, even after clicking */
+.navbar-brand:visited, .navbar-title:visited {
+  color: black !important;
+}
+
+/* --- Global Font Settings --- */
+body, p, li, span, a, div, h2, h3, h4, h5, h6 {
+  font-family: "Times New Roman", Times, serif !important;
+}
+
+/* Main Header Font (Tab Titles) */
+h1, h1.title, .quarto-title-text, .title {
+  font-family: "Cooper BT", "Cooper Black", "Cooper Hewitt", serif !important;
+}

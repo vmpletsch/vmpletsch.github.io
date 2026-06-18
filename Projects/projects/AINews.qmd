@@ -1,0 +1,9 @@
+---
+title: "AI Within News Media Discourse"
+subtitle: "Coming soon!"
+categories: ["Shiny"]
+date: "2026-03-11"
+image: "../../previews/Projects_1.png"
+toc: false
+page-layout: full
+---
