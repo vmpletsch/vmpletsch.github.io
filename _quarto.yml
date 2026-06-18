@@ -6,7 +6,8 @@ project:
     - V_Pletsch_CV.pdf
 
 website:
-  title: "Homepage"
+  title: "Veronica Pletsch | Homepage"
+  description: "Veronica Pletsch portfolio: social scientist, data scientist & UChicago alumna. Discovering the hidden logic of familiar things through research."
   navbar:
     background: transparent
     search: true

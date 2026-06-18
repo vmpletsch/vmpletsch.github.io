@@ -416,27 +416,27 @@ html {
 
 /* --- Testimonials --- */
 .testimonial-container {
-  padding: 60px 20px;
+  padding: 40px 20px;
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
 }
 
 .testimonial-quote {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   /* Medium size font */
   font-style: italic;
   color: #333;
   margin-bottom: 10px;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .testimonial-author {
-  font-size: 1.1rem;
+  font-size: 1.0rem;
   color: #881ca3;
   /* Uses your theme purple */
   font-weight: bold;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 /* Force the navbar homepage title to always remain black, even after clicking */
