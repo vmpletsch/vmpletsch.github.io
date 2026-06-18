@@ -8,6 +8,7 @@ project:
 website:
   title: "Veronica Pletsch | Homepage"
   description: "Veronica Pletsch portfolio: social scientist, data scientist & UChicago alumna. Discovering the hidden logic of familiar things through research."
+  favicon: favicon.png
   navbar:
     background: transparent
     search: true
