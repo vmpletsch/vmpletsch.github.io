@@ -10,7 +10,7 @@ format:
 
 <h1 class="tracking-in-expand" style="font-size: 100px; margin-bottom: -30px; line-height: 1; font-family: 'DM Serif Display', serif; text-align: center; width: 100%;">Veronica Pletsch</h1>
 
-![](images/picture.png){.about-img width="30%" fig-align="center"}
+![Veronica Pletsch](images/veronica_pletsch.png){.about-img width="30%" fig-align="center"}
 
 <h2 style="text-align: center; width: 100%; margin-bottom: 15px;">Welcome to my portfolio</h2>
 

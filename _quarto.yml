@@ -36,6 +36,7 @@ website:
 
 format:
   html:
+    include-in-header: schema.html
     embed-resources: true
     theme: cosmo
     css: 
