@@ -19,80 +19,9 @@ format:
   </a>
 </div>
 
-::: {.column-margin}
-### Education
+::: {.grid}
 
-::: {.education-item}
-
-<div>
-**University of Chicago**  
-
-*Master of Social Science*
-</div>
-:::
-
-::: {.education-item}
-<div>
-**DePaul University** 
-
-*Bachelor of Sociology*
-</div>
-:::
-
-### Skills
-
-* **Programming**
-    * R
-    * Python
-    * LaTeX
-    * SQL
-    
-* **Data Science**
-    * NLP BERTopic
-    * FinBERT
-    * Topic Modeling (LDA, Dynamic, Gamma/Beta Parameters) 
-    * Granger Causality
-    * Geo-spatial Analysis
-    * Data Wrangling
-    * Data Visualization
-    * Model Evaluation (Coherence, Perplexity)
-    * Econometric Modeling
-    * Multivariate Analysis
-
-* **Statistics**
-    * Bayesian Inference
-    * Regression Discontinuity Design
-    * Propensity Score Matching
-    * Difference-in-Difference
-    * Interrupted Time-Series
-    
- * **Research**
-    * Mixed Methods (Qual/Quant)
-    * Ethnography
-    * Focus Groups
-    * Grant and Proposal Writing
-    * Interviewing
-    * IRB
-    * Report Writing and Data Dissemination
-    * Study Design
-    * Study Recruitment
-    * Surveys
-
- * **Softwares**
-    * MAXQDA
-    * NVivo
-    * Overleaf
-    * SPSS
-    * STATA
-    * Survey Monkey
-    * Qualtrics
-    * Microsoft 365
-    * Tableau
-    * RShiny
-    
-
-:::
-
+::: {.g-col-7}
 ::: {.timeline}
   
 ::: {.timeline-item}
@@ -169,4 +98,83 @@ format:
 * Drafted policy memos, took notes for city council meetings, prepped materials for meetings between the Alderman and community organizations and local businesses.
 
 :::
+:::
+:::
+
+:::
+
+::: {.g-col-5}
+### Education
+
+::: {.education-item}
+
+<div>
+**University of Chicago**  
+
+*Master of Social Science*
+</div>
+:::
+
+::: {.education-item}
+<div>
+**DePaul University** 
+
+*Bachelor of Sociology*
+</div>
+:::
+
+### Skills
+
+* **Programming**
+    * R
+    * Python
+    * LaTeX
+    * SQL
+    
+* **Data Science**
+    * NLP BERTopic
+    * FinBERT
+    * Topic Modeling (LDA, Dynamic, Gamma/Beta Parameters) 
+    * Granger Causality
+    * Geo-spatial Analysis
+    * Data Wrangling
+    * Data Visualization
+    * Model Evaluation (Coherence, Perplexity)
+    * Econometric Modeling
+    * Multivariate Analysis
+
+* **Statistics**
+    * Bayesian Inference
+    * Regression Discontinuity Design
+    * Propensity Score Matching
+    * Difference-in-Difference
+    * Interrupted Time-Series
+    
+ * **Research**
+    * Mixed Methods (Qual/Quant)
+    * Ethnography
+    * Focus Groups
+    * Grant and Proposal Writing
+    * Interviewing
+    * IRB
+    * Report Writing and Data Dissemination
+    * Study Design
+    * Study Recruitment
+    * Surveys
+
+ * **Softwares**
+    * MAXQDA
+    * NVivo
+    * Overleaf
+    * SPSS
+    * STATA
+    * Survey Monkey
+    * Qualtrics
+    * Microsoft 365
+    * Tableau
+    * RShiny
+    
+
+:::
+
 :::
