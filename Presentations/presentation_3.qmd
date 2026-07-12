@@ -1,11 +1,12 @@
 ---
 title: "A Computational Analysis of Artificial Intelligence Within U.S. Media Discourse (2000-2024)"
-subtitle: "Coming Soon!"
-categories: ["Professional"]
-date: "2024-05-29"
+categories: ["Graduate"]
+date: "2026-05-22"
 image: "../previews/Presentation_3.png"
 toc: false
 page-layout: full
 ---
 
-xxx
+<iframe src="Master Thesis Poster.pdf#view=Fit" width="100%" height="800px" style="border: none;">
+  This browser does not support PDFs. Please download the PDF to view it.
+</iframe>

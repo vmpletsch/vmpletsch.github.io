@@ -1,11 +1,12 @@
 ---
 title: "A Comparison of Social Hierarchy Amongst Primates"
-subtitle: "Coming Soon!"
-categories: ["Grad"]
-date: "2026-05-22"
+categories: ["Undergraduate"]
+date: "2021-11-14"
 image: "../previews/Presentation_2.png"
 toc: false
 page-layout: full
 ---
 
-xxx
+<iframe src="A Comparison of Social Hierarchy Amongst Primates.pdf" width="100%" height="800px" style="border: none;">
+  This browser does not support PDFs. Please download the PDF to view it.
+</iframe>

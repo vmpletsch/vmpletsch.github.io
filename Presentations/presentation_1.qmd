@@ -1,11 +1,13 @@
 ---
 title: "Prevelance of Lifetime Indirect and Direct Firearm Violence, Victimization, and Perpetration."
-subtitle: "Coming Soon!"
-categories: ["Undergrad"]
-date: "2021-11-14"
+categories: ["Professional"]
+date: "2024-05-29"
 image: "../previews/Presentation_1.png"
 toc: false
 page-layout: full
 ---
 
-xxx
+
+<iframe src="Prevalence of Lifetime Firearm Violence.pdf" width="100%" height="800px" style="border: none;">
+  This browser does not support PDFs. Please download the PDF to view it.
+</iframe>

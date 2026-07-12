@@ -37,7 +37,7 @@ website:
 format:
   html:
     include-in-header: schema.html
-    embed-resources: true
+    embed-resources: false
     theme: cosmo
     css: 
       - custom.css
