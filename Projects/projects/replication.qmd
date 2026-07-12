@@ -3,7 +3,7 @@ title: "Computational Analysis of Global Conflict"
 subtitle: "A Replication Study"
 categories: ["Latent Dirichlet Allocation"]
 date: "2026-02-14"
-image: "../../previews/Projects_5.png"
+image: "../../previews/Project_3.png"
 toc: false
 page-layout: full
 ---

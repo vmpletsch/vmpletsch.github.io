@@ -7,5 +7,16 @@
       "/Presentations/presentation_1.html",
       "/Presentations/presentation_4.html"
     ]
+  },
+  {
+    "listing": "/projects.html",
+    "items": [
+      "/Projects/projects/AISentiment.html",
+      "/Projects/projects/AINews.html",
+      "/Projects/projects/replication.html",
+      "/Projects/projects/FertilityDrivers.html",
+      "/Projects/projects/tableau.html",
+      "/Projects/projects/problemset.html"
+    ]
   }
 ]

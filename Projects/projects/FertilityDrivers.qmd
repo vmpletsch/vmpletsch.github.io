@@ -3,7 +3,7 @@ title: "Fertility Drivers"
 subtitle: "An Interactive Analysis of Global Birth Rates"
 categories: ["Shiny"]
 date: "2026-03-02"
-image: "../../previews/Project_3.png"
+image: "../../previews/Projects_4.png"
 toc: false
 page-layout: full
 ---
