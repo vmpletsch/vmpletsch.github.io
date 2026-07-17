@@ -4,7 +4,7 @@ listing:
   contents: Presentations
   type: grid
   sort-ui: true         
-  filter-ui: true     
+  filter-ui: false     
   grid-columns: 3      
   categories: true  
   grid-item-align: center 

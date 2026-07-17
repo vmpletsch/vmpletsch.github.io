@@ -1,0 +1,11 @@
+---
+title: "The Public Narrative of Welfare and the Impoverished: Effects of Social Stereotypes on Low-Income Individuals"
+categories: ["Qualitative Analysis"]
+date: "2022-06-01"
+image: "../../previews/Writingsample_4.png"
+toc: false
+page-layout: full
+---
+<iframe src="../Senior_Capstone_paper.pdf" width="100%" height="800px" style="border: none;">
+  This browser does not support PDFs. Please download the PDF to view it.
+</iframe>

@@ -1,0 +1,500 @@
+---
+title: "Problem Set"
+author: "Veronica Pletsch"
+date: "January 21, 2026"
+format: 
+  html:
+    toc: true
+    theme: flatly
+    embed-resources: true
+  pdf:
+    toc: true
+execute:
+  echo: false
+  warning: false
+  message: false
+fig-align: center
+prefer-html: true
+mainfont: "Times New Roman"
+fontsize: 12pt
+---
+
+## Introduction
+
+"Long Peace" (Steven Pinker's thesis that war is in decline
+
+This study evaluates inter-state conflict from 1823 to 2003 through a dual lens. First, it applies statistical power-law modeling to determine if the structural deadliness of war shifted after 1945. Second, it contextualizes these global parameters by mapping the geographic distribution of per-capita fatalities, revealing that spatial density and regional geopolitics deeply distort generalized global trends.
+
+## Background Literature
+What to cover: Discuss the literature surrounding the changing nature of warfare post-WWII (1945). Mention international relations theories concerning the "Long Peace," the rise of international organizations (like the UN), nuclear deterrence, and democratic peace theory.
+
+Connection to your data: Frame your Chronological Trend Graph and Power-Law Analysis as a formal empirical test of this literature. The literature asks if the international system became more stable after 1945; your statistical models test if the underlying "scale" ($\alpha$) of war deadliness actually changed or if the apparent decline in severity is statistically insignificant.
+
+This is where your bridge happens. A statistical aggregate like a power-law distribution can tell us what the global system looks like, but it cannot tell us how it got that way. To understand why global war deadliness behaves as a stable structural system, we have to look inside the distribution at its geographic components.
+## Methods
+
+The datasets used for this assignment were pulled from the Correlates of War Project (COW). It includes the Wars dataset that contains data on the number of war deaths per country per war from 1823 until 2003 and Cap which contains the total population of each country per year from 1816 until 2012. The total number of entries in the Wars dataset is 337 observations and 25 variables while the Cap dataset is much larger at 15,171 observations and 11 variables. Both datasets were combined to accurately measure the correlation between war deaths (BatDeaths) and total population (tpop) per country. These variables were then calculated to find the ratio of war deaths by population and finally the aggregation of how many war deaths per a population of 100,000 occurred for each country between 1823 and 2003. To be as historically accurate as possible with consideration of mapping our data to a choropleth with modern state borders, certain countries were combined. The data of such countries were recoded as the present country that they later dissolved into. For example, the state of Prussia was recoded as ‘Germany’.  
+
+## Results
+
+
+```{r, echo=FALSE}
+
+library(tidyverse) #used for the dplyr left_join function to combine datasets
+                   #used to %>% various segments of my code together
+                   #used for functions: group_by, arrange, mutate, select, recode, 
+                   #used for ggplot to make basic graph 
+
+
+
+library(colorspace) #used to adjust my legend, creating sequential bins and color palette
+
+
+library(scales) #used on graphs for trans="pseudo_log" and label_number  
+
+```
+
+
+```{r Load Data, echo=FALSE}
+#load the war deaths data
+wars_dataset_1 <- read.csv("wars.csv") 
+#load population data
+population_data <- read.csv("cap.csv")
+```
+
+
+
+```{r Prep Data, echo=FALSE}
+
+#combine war and population datasets
+wars_dataset_2 <- left_join(wars_dataset_1, population_data, by = c("ccode" = "ccode", "StartYear1" = "year"))
+
+#remove unnecessary columns 
+wars_dataset_3 <- wars_dataset_2 %>% select(-WarNum, -WarName, -WarType, -Side, -StartMonth1, -StartDay1, -EndMonth1, -EndDay1, -EndYear1, -EndMonth2, -EndDay2, -EndYear2, -TransFrom, -TransTo, -Version, -StartMonth2, -StartDay2, -StartYear2, -Initiator, -Outcome, -WhereFought, -milex, -milper, -irst, -pec, -cinc, -version)
+
+#rename columns 
+wars_dataset_4 <- wars_dataset_3 %>%
+  mutate(StateName = recode(StateName,
+                            "United States of America" = "USA",
+                            "United Kingdom" = "UK",
+                            "USSR" = "Russia",
+                            "Austria-Hungary" = "Austria",
+                            "Prussia" = "Germany",
+                            "Hanover" = "Germany",
+                            "Bavaria" = "Germany",
+                            "Baden" = "Germany",
+                            "Saxony" = "Germany",
+                            "Wuerttemburg" = "Germany",
+                            "Hesse Electoral" = "Germany",
+                            "Hesse Grand Ducal" = "Germany",
+                            "Mecklenburg Schwerin" = "Germany",
+                            "Sardinia/Piedmont" = "Italy",
+                            "Papal States" = "Italy",
+                            "Two Sicilies" = "Italy",
+                            "Modena" = "Italy",
+                            "Tuscany" = "Italy",
+                            "Czechoslovakia" = "Czech Republic",
+                            "Yugoslavia" = "Serbia",
+                            "Ottoman Empire" = "Turkey",
+                            "China (PRC)" = "China",
+                            "Taiwan (ROC)" = "Taiwan",
+                            "South Vietnam" = "Vietnam",
+                            "Yemen Arab Republic" = "Yemen"))
+#sort alphabetically
+wars_dataset_5 <- wars_dataset_4 %>% arrange(StateName)
+
+#Tpop is in thousands so multiply by 1000
+wars_dataset_6 <- wars_dataset_5 %>%
+    mutate(tpop = tpop * 1000) 
+
+
+
+#collapse into single rows 
+wars_dataset_7 <- wars_dataset_6 %>% 
+  group_by(StateName) %>%
+  summarise(
+    BatDeath = sum(BatDeath, na.rm = TRUE),
+    tpop = mean(tpop, na.rm = TRUE)
+    ) 
+
+#Create a new column for the ratio of deaths per total population
+wars_dataset_8 <- wars_dataset_7 %>%
+    mutate(ratio_deaths_by_pop_year = BatDeath/tpop)
+
+#create a new column for the number of deaths per 1000 population
+wars_dataset_9 <- wars_dataset_8 %>%
+  mutate(deaths_per_100000 = ratio_deaths_by_pop_year * 100000)
+
+#load maps data
+world_map <- map_data("world")
+
+#join world_map and wars_dataset
+wars_map_joined <- left_join(world_map, wars_dataset_9, by = c("region" = "StateName"))
+
+#recode 0 data as NA
+wars_dataset_final <- wars_map_joined %>%
+    mutate(deaths_per_100000 = na_if(deaths_per_100000, 0.0000000))
+
+```
+
+
+
+```{r Final Map, echo=FALSE, warning=FALSE, message=FALSE}
+library(plotly)
+#plot map
+p_map <- ggplot(wars_dataset_final, aes(
+  x = long, y = lat, group = group, fill = deaths_per_100000,
+  text = paste("<b>Country:</b>", region, "<br><b>Deaths per 100k:</b>", round(deaths_per_100000, 2))
+)) +
+  geom_polygon(color = "black", linewidth = 0.1) +
+    geom_point(aes(color = "NA"), alpha = 0, size = 0) +
+   
+    coord_fixed(1.1) +
+    
+  scale_fill_binned_sequential(palette = "BuPu",
+                       trans = "pseudo_log",
+                       labels = c("O", "100", "500", "1000", "5000", "10000", "20000", "30000"),
+                       breaks = c(0, 100, 500, 1000, 5000, 10000, 20000, 30000),
+                       limits = c(0, 40000),
+                       na.value = "#eeeeee") +
+    scale_x_continuous(labels = label_number(suffix = "°W")) + 
+    scale_y_continuous(labels = label_number(suffix = "°N")) +
+    
+ scale_color_manual(
+    name = " ", 
+    values = "#eeeeee",
+    guide = guide_legend(
+      override.aes = list(
+        shape = 15,          
+        size = 5,        
+        alpha = 1,          
+        color = "#eeeeee"   
+      ),
+      order = 2
+    )
+  ) +
+    
+ labs(title = "Geographic Distribution of Inter-State War Fatalities (1823-2003)",
+       x = "Longitude",
+       y = "Latitude") +
+    guides(fill = guide_colorsteps(
+        barwidth = 20, 
+        barheight = 0.5, 
+        title.position = "top",
+        ticks.colour = "white")) +
+    
+theme_minimal(base_family = "Times New Roman", base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold", size = 16, color = "#2C3E50", margin = margin(b = 10)),
+    axis.title.x = element_text(face = "bold", size = 14, color = "#34495E", margin = margin(t = 10)),
+    axis.title.y = element_text(face = "bold", size = 14, color = "#34495E", margin = margin(r = 10)),
+    axis.text = element_text(size = 12, color = "#7F8C8D")
+  )
+
+ggplotly(p_map, tooltip = "text")
+```
+
+The choropleth raises interesting questions and insights into the broader geographic context. One such question is whether the concentration of sovereign states and land mass plays a role in inter-state wars. Indeed, in comparison to South America that has 12 countries spanning 6.8 million square miles, Europe has more than 40 countries packed into roughly 4 million square miles. Moreover, the vast majority of colonizers are historically European. This raises the question of whether the cultural identity of “power” or the prioritization of economic pursuits correlates to the high concentration of inter-state conflicts in Europe.
+
+
+
+```{r, echo=FALSE}
+# above is code for data viz 
+# below is code for power set compir
+```
+
+
+```{r, echo=FALSE}
+library(dplyr)
+library(readr)
+```
+
+```{r, echo=FALSE}
+cap <- read.csv("cap.csv")
+wars <- read.csv("wars.csv")
+```
+
+```{r, echo=FALSE}
+#merge wars and cap file with inner_join by matching ccode and year/startyear1
+merged_wars <- wars %>%
+  inner_join(cap, by = c("ccode" = "ccode", "StartYear1" = "year")) %>%
+    
+#convert tpop to thousands so that it matches batdeath
+mutate(population_total = tpop * 1000) %>%
+
+#collapse multiple rows for one war into 1 row with totals
+group_by(WarName, StartYear1) %>%
+    
+#aggregate deaths 
+summarize(
+    total_deaths = sum(BatDeath, na.rm = TRUE),
+    total_belligerent_pop = sum(population_total, na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+    
+#calculate the total deaths for belligerents
+mutate(
+    deaths_by_poptotal = total_deaths / total_belligerent_pop
+  ) 
+
+```
+
+```{r, echo=FALSE}
+#rename year variable and sort chronologically
+merged_wars <- merged_wars %>% 
+  rename(year = StartYear1) %>%
+  arrange(year)
+```
+
+```{r, echo=FALSE}
+#save merged_wars as new csv file
+write.csv(merged_wars, "merged_wars.csv", row.names = FALSE)
+```
+
+```{r, echo=FALSE, fig.width=8, fig.height=5}
+#Plot a histogram of your deaths per capita distribution and make sure you see the long tail
+library(tidyverse)
+library(scales)
+library(plotly)
+
+p_hist <- ggplot(merged_wars, aes(x = deaths_by_poptotal)) +
+  geom_histogram(
+    fill = "#3B7BA8", 
+    color = "white", 
+    alpha = 0.9, 
+    binwidth = 0.001
+  ) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.08))) +
+  scale_x_continuous(labels = label_number(accuracy = 0.001)) +
+  labs(
+    x = "Fatalities per Capita",
+    y = "Frequency (Number of Inter-State Conflicts)",
+    title = "Frequency Distribution of Inter-State War Fatalities (1823-2003)",
+    subtitle = "Analysis of Interstate Conflicts revealing a long-tail distribution",
+    caption = "Source: Correlates of War project"
+  ) +
+  theme_minimal(base_family = "Times New Roman", base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold", size = 16, color = "#2C3E50", margin = margin(b = 5)),
+    plot.subtitle = element_text(size = 12, color = "#7F8C8D", margin = margin(b = 15)),
+    plot.caption = element_text(size = 10, color = "#95A5A6", face = "italic", hjust = 1, margin = margin(t = 15)),
+    axis.title.x = element_text(face = "bold", size = 14, color = "#34495E", margin = margin(t = 10)),
+    axis.title.y = element_text(face = "bold", size = 14, color = "#34495E", margin = margin(r = 10)),
+    axis.text = element_text(size = 12, color = "#7F8C8D"),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "#E5E8E8", linewidth = 0.6),
+    panel.grid.minor = element_blank(),
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.background = element_rect(fill = "white", color = NA),
+    plot.margin = margin(t = 20, r = 20, b = 20, l = 20)
+  )
+
+ggplotly(p_hist)
+```
+
+```{r, echo=FALSE}
+#Plot deaths per capita against the year, and see if you notice a pattern.
+
+library(tidyverse)
+library(plotly)
+library(scales)
+
+p <- ggplot(merged_wars, aes(
+  x = year, 
+  y = deaths_by_poptotal,
+  group = 1,
+
+  text = paste(
+    "<b>War:</b>", WarName,
+    "<br><b>Year:</b>", year,
+    "<br><b>Total Deaths:</b>", comma(total_deaths),
+    "<br><b>Total Population:</b>", comma(total_belligerent_pop),
+    "<br><b>Deaths per Capita:</b>", round(deaths_by_poptotal, 5)
+  )
+)) +
+  geom_line(color = "darkseagreen4", alpha = 0.6) +
+  geom_point(color = "darkseagreen4", size = 1.5) +
+  scale_x_continuous(breaks = seq(1820, 2000, by = 20)) +
+  labs(
+    title = "Chronological Trend of Inter-State War Fatalities (1823-2003)",
+    x = "Year",
+    y = "Fatalities per Capita"
+  ) +
+  theme_minimal(base_family = "Times New Roman", base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold", size = 16, color = "#2C3E50", margin = margin(b = 10)),
+    axis.title.x = element_text(face = "bold", size = 14, color = "#34495E", margin = margin(t = 10)),
+    axis.title.y = element_text(face = "bold", size = 14, color = "#34495E", margin = margin(r = 10)),
+    axis.text = element_text(size = 12, color = "#7F8C8D"),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "#E5E8E8", linewidth = 0.6),
+    panel.grid.minor = element_blank(),
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.background = element_rect(fill = "white", color = NA)
+  )
+
+ggplotly(p, tooltip = "text")
+```
+
+
+```{r, echo=FALSE}
+#install.packages("poweRlaw")
+
+library(poweRlaw)
+
+wars_before_1945 <- merged_wars %>% filter(year < 1945)
+
+wars_after_1945 <- merged_wars %>% filter(year >= 1945, deaths_by_poptotal > 0)
+
+#Before 1945
+#Never used a power law before so I am relying on google and chatgpt to guide me
+#Create a continuous power-law object
+before_45 <- conpl$new(wars_before_1945$deaths_by_poptotal)
+#Estimate $x_{min}$ (the value where the power law starts)
+est_before_45 <- estimate_xmin(before_45)
+before_45$setXmin(est_before_45)
+#Estimate $\alpha$ (the scaling parameter)
+alpha_before_45 <- before_45$pars 
+
+
+#After 1945
+#Create a continuous power-law object
+after_45 <- conpl$new(wars_after_1945$deaths_by_poptotal)
+#Estimate $x_{min}$ (the value where the power law starts)
+est_after_45 <- estimate_xmin(after_45)
+after_45$setXmin(est_after_45)
+#Estimate $\alpha$ (the scaling parameter)
+alpha_after_45 <- after_45$pars
+
+# Raw outputs have been suppressed and formatted into a summary table below.
+
+```
+
+
+```{r, echo=FALSE}
+
+#1000 times
+alpha_differences <- numeric(1000)
+
+#use a for loop to get to 1000 simulations
+for (i in 1:1000) {
+  
+#bootstrp sample
+sample_before_45 <- sample(wars_before_1945$deaths_by_poptotal, replace = TRUE)
+sample_after_45 <- sample(wars_after_1945$deaths_by_poptotal, replace = TRUE)
+  
+#estimate the powerlaw for before 1945 sample
+before_45_simulation <- conpl$new(sample_before_45)
+before_45_simulation$setXmin(estimate_xmin(before_45_simulation))
+  
+#estimate the powerlaw for after 1945 sample
+after_45_simulation <- conpl$new(sample_after_45)
+after_45_simulation$setXmin(estimate_xmin(after_45_simulation))
+  
+#Note the difference between before and after 1945
+alpha_differences[i] <- before_45_simulation$pars - after_45_simulation$pars
+  
+}
+
+```
+
+```{r, echo=FALSE, results='asis'}
+#Calculate the 2.5% and 97.5% quantiles
+conf_interval <- quantile(alpha_differences, probs = c(0.025, 0.975))
+
+# Create a clean dataframe for presentation
+library(knitr)
+results_table <- data.frame(
+  Metric = c("Power-Law Alpha (Before 1945)", 
+             "Power-Law Alpha (After 1945)", 
+             "95% CI Lower Bound (2.5%)", 
+             "95% CI Upper Bound (97.5%)"),
+  Value = c(round(alpha_before_45, 5), 
+            round(alpha_after_45, 5), 
+            round(conf_interval[1], 5), 
+            round(conf_interval[2], 5))
+)
+
+kable(results_table, caption = "Statistical Modeling Results: Power-Law Alpha Parameters")
+```
+
+```{r, echo=FALSE, fig.width=8, fig.height=5}
+library(tidyverse)
+library(plotly)
+
+simulated_parameters <- data.frame(diff = alpha_differences)
+p_ci <- ggplot(simulated_parameters, aes(x = diff)) +
+  geom_histogram(
+    fill = "#3B7BA8", 
+    color = "white", 
+    alpha = 0.9, 
+    bins = 30
+  ) +
+  geom_vline(xintercept = conf_interval[1], linetype = "dashed", color = "#E74C3C", linewidth = 1) +
+  geom_vline(xintercept = conf_interval[2], linetype = "dashed", color = "#E74C3C", linewidth = 1) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.08))) +
+  labs(
+    title = "Statistical Shift in War Fatalities (Pre vs. Post-1945)",
+    x = "Difference in Fatality Distribution (Pre-1945 vs Post-1945)",
+    y = "Frequency (Number of Simulations)"
+  ) +
+  theme_minimal(base_family = "Times New Roman", base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold", size = 16, color = "#2C3E50", margin = margin(b = 10)),
+    axis.title.x = element_text(face = "bold", size = 14, color = "#34495E", margin = margin(t = 10)),
+    axis.title.y = element_text(face = "bold", size = 14, color = "#34495E", margin = margin(r = 10)),
+    axis.text = element_text(size = 12, color = "#7F8C8D"),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "#E5E8E8", linewidth = 0.6),
+    panel.grid.minor = element_blank(),
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.background = element_rect(fill = "white", color = NA)
+  )
+
+ggplotly(p_ci) %>% 
+  layout(title = list(text = paste0(
+    'Statistical Shift in War Fatalities (Pre vs. Post-1945)',
+    '<br><sup>Red dashed lines indicate the 2.5% and 97.5% quantiles</sup>'
+  )))
+```
+
+
+
+## Discussion
+### **Analysis: Is War in Decline?**
+
+Based on this analysis, the frequency of war does not appear to be in decline; however, whether war has become more or less deadly since 1945 remains ambiguous. The "Severity of War: Deaths Per Capita Over Time" graph suggests an increase in the frequency of wars. Specifically, between 1823 and 1945 (a 122-year period), there were 69 wars, whereas between 1945 and 2003 (a 58-year period), there were 45 wars. This translates to an increase from 0.57 wars per year before 1945 to 0.78 wars per year after 1945. 
+
+However, despite the increased frequency of conflicts, the alpha parameter derived from the power-law distribution implies slightly fewer deaths per capita per war after 1945 (\(\alpha = 1.62\)) compared to the period before 1945 (\(\alpha = 1.57\)). Furthermore, the 95% confidence interval reveals no statistically significant difference in deaths per capita between the two periods. Ultimately, these findings are limited by the available timeline. A more comprehensive analysis incorporating recent data from 1945 to 2023—providing a temporal scope equivalent to the pre-1945 period—is necessary to draw definitive conclusions regarding the changing deadliness of modern warfare.
+
+## Conclusion 
+### Limitations 
+
+Our data is limited solely to inter-state wars, or wars that occur between two or more recognized sovereign states (COW.org). This excludes intra-state wars (wars within a single nation such as a civil war), non-state wars (wars not directed by a sovereign state, but instead between local agents or ethnic groups) and extra-state wars (wars between a sovereign state and local agents). This limitation thus underrepresents the scale of total casualties of war and magnitude of human violence. An additional limitation is COW’s criteria for identifying countries that participated in an inter-state conflict. Consequently, some states that did participate in a war were excluded from the dataset. For example, Angola is only listed once in the dataset for the 1975 War over Angola. However, they did also participate, albeit in a minor capacity, in the 1998 Second Congo War. This exclusion due to the COW criteria hinders the accuracy of war deaths by population ratio. 
+
+ 
+
+## Geographic Patterns and Insights 
+
+The choropleth does, however, provide an excellent visual to assess which countries’ populations have been most affected by inter-state wars. Indeed, the map highlights countries that have been affected by high fatality wars that are largely left out of the general public’s ‘war’ discourse. Paraguay, for example, is often lesser known for having among the highest war fatality rates per capita. However, within this choropleth Paraguay can easily be distinguished as one of the most effected countries, with a staggering 30,000 deaths per 100,000 citizens.  Another spatial pattern that emerges is the overwhelming concentration of high fatality inter-state wars on the European continent. In due part to the aid of the map's visuals, an observer could make the connection to Europe’s density. Indeed, it has a high concentration of sovereign states that share borders with multiple countries within a geographically small region. 
+ 
+
+### Design Justification 
+
+The choropleth is definitively among the best visual aids to represent the death ratio of inter-state wars per capita. As previously mentioned, the map allows for the spatial patterns of war, such as the high concentration in Europe, to emerge in a way that a bar graph would not convey. In opting for a large-scale map with a Mercator projection and a sequential gradient fill, audiences can easily engage in comparing the toll of inter-state wars and spatial patterns of conflict across the globe. In comparison, and as evident in both my alternative graphs, a heatmap and a point graph fail to meet the standards of a truthful, function, beautiful, insightful and enlightening graph. In fact, the point graph, even if it were to be further revised, would fail to be functional whereas an observer could quickly assess the message of the data being visualized. Moreover, the heatmap does do well with demonstrating the high concentration of inter-state wars in Europe. However, the “heat” overshadows the state outlines, making it difficult to assess what the data is trying to convey. Finally, the heatmap only succeeds in illustrating the spatial concentration of war and fails to assess the effect of war on every individual country. 
+
+ 
+
+
+
+## Appendix: Chronological Record of Inter-State War Fatalities (1823-2003)
+
+```{r, echo=FALSE, results='asis'}
+library(knitr)
+merged_wars_table <- read.csv("merged_wars.csv")
+
+# Clean up column names for presentation
+colnames(merged_wars_table) <- c("War Name", "Year", "Total Deaths", "Total Belligerent Population", "Fatalities Per Capita")
+
+kable(merged_wars_table, caption = "Chronological Record of Inter-State War Fatalities (1823-2003)")
+```
