@@ -1,5 +1,6 @@
 ---
-title: "The Social Perspective and Personal Experience of Individuals in Poverty in the United States"
+title: "The Social Perspective and Personal Experience of Individuals in Poverty"
+description: "Presented undergraduate senior capstone research on the social perspectives and lived experiences of individuals living in poverty across the United States. This poster was prepared for DePaul University’s Department of Sociology Sharing Social Knowledge conference." 
 categories: ["Undergraduate"]
 date: "2022-06-01"
 image: "../previews/Presentation_4.png"

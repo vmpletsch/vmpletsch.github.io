@@ -1,12 +1,12 @@
 ---
 title: "Prevelance of Lifetime Indirect and Direct Firearm Violence, Victimization, and Perpetration."
+description: "Presented research findings on behalf of the Growing-up With Guns (GWG) Project within the Public Health Department at NORC at the University of Chicago. This presentation exhibits findings on youth exposure to firearm violence at the 32nd Annual Society for Prevention Research (SPR) conference in Washington, DC."
 categories: ["Professional"]
 date: "2024-05-29"
 image: "../previews/Presentation_1.png"
 toc: false
 page-layout: full
 ---
-
 
 <iframe src="Prevalence of Lifetime Firearm Violence.pdf" width="100%" height="800px" style="border: none;">
   This browser does not support PDFs. Please download the PDF to view it.

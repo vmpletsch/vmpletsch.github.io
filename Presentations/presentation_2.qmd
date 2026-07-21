@@ -1,5 +1,6 @@
 ---
 title: "A Comparison of Social Hierarchy Amongst Primates"
+description: "Presented a comparative analysis evaluating the structure, behavior, and social stratification across human and non-human primate species. This presentation was prepared for the Department of Anthropology's 270 course end-of-term research conference at DePaul University."
 categories: ["Undergraduate"]
 date: "2021-11-14"
 image: "../previews/Presentation_2.png"

@@ -1,5 +1,6 @@
 ---
 title: "A Computational Analysis of Artificial Intelligence Within U.S. Media Discourse (2000-2024)"
+description: "Presented master's thesis research findings for the MACS 30200 (Computational Research Design) end-of-term conference at the University of Chicago."
 categories: ["Graduate"]
 date: "2026-05-22"
 image: "../previews/Presentation_3.png"
