@@ -10,18 +10,15 @@ format:
 
 <h1 class="tracking-in-expand" style="font-size: 100px; margin-bottom: 0px; line-height: 1; font-family: 'DM Serif Display', serif; text-align: center; width: 100%;">Veronica Pletsch</h1>
 
-<div style="text-align: center; margin-top: 40px; margin-bottom: 40px;">
-  <img src="images/veronica_pletsch.png" alt="Veronica Pletsch" class="about-img" style="width: 30%;">
+<div style="text-align: center; margin-top: 0px; margin-bottom: 50px;">
+  <img src="images/veronica_pletsch.png" alt="Veronica Pletsch" class="about-img" style="width: 50%;">
 </div>
 
 <h2 style="text-align: center; width: 100%; margin-bottom: 10px; margin-top: 0px;">Welcome to my portfolio</h2>
 
 <p style="text-align: center; width: 100%; font-size: 1.2rem;">Data Scientist | Social Science Researcher</p>
-<p style="text-align: center; width: 100%; font-size: 1.1rem;">
-  <em>Discovering the hidden logic of familiar things through research</em>
-</p>
 
-<div style="margin-top: 50px;">
+<div style="margin-top: 0px; margin-bottom: 200px">
   <a href="#testimonials" class="scroll-down-arrow">
     <i class="bi bi-chevron-down" style="font-size: 3rem; color: #881ca3;"></i>
   </a>
@@ -47,12 +44,16 @@ format:
 </div>
 :::
 
-::: {#about style="padding: 100px 20px; text-align: left; max-width: 800px; margin: 0 auto; min-height: 60vh;"}
+::: {#about style="padding: 20px 20px; text-align: left; max-width: 800px; margin: 0 auto; min-height: 60vh;"}
 ## About Me
 
-Hey there! I'm Veronica, when I'm not giving myself musculoskeletal issues and heart palpitations from being hunched over my computer doing research with 400 milligrams of caffeine in my system, I like to dabble in my hobbies. I love playing with my cat Sabrina who is the size of exactly half a rice cooker and hit the gym as an amateur body builder who can totally deadlift 675lbs.
+Hey there! Before we get to the nerdy, fun stuff, here's some serious context. I am a first generation high school and college graduate, I was raised in poverty by a single teenage mom in Chicago. These details matter, they've shaped who I am both personally and professionally. It was poverty that influenced me to think critically and analytically in order to overcome the psychological, financial, and social barriers placed on me. It is from these experiences that I first became curious by the perplexing nature of human behavior, society, and social interactions. Ultimately, through my career as a social science researcher and data scientist, I strive to *"discover the hidden logic of familiar thing"* to better understand our complex social world and to hopefully leave it better than I found it.
 
-Thanks for stopping by! While you're here, please explore my recent research projects, writing samples, and while you're at it, take a PDF copy of my resume as a souvenir of your trip here.
+On a lighter note, when I'm not giving myself musculoskeletal issues and heart palpitations from being hunched over my computer doing research with 400 milligrams of caffeine in my system, I like to dabble in my hobbies. I love playing with my cat Sabrina, who likes to loaf in her rice cooker box and offer side quests to passers-by. I also love to hit the gym as an amateur body builder and yes... I can totally dead-lift 675lbs. Want to know more? Uh-uh, you gotta offer me a BigMac or something before I put more info of myself on the internet!
+
+Anyway, while you're here, please explore my recent research projects, writing samples, and while you're at it, take a PDF copy of my resume as a souvenir of your trip here.
+
+Thanks for stopping by! 
 
 ::: {layout-ncol=2 style="margin-top: 40px; center;"}
 ![Lil Mama Sabrina](images/sabrina.png){.about-img}
