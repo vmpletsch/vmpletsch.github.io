@@ -23,7 +23,9 @@ toc: false
 :::
 
 ::: {#email}
-[<i class="bi bi-envelope-fill" style="font-size: 3rem; color:  #fa70ff;"></i>](mailto:vmpletsch@gmail.com)
+<a href="email_form.html">
+  <i class="bi bi-envelope-fill" style="font-size: 3rem; color:  #fa70ff;"></i>
+</a>
 <br>**Email**
 :::
 :::

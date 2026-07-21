@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>contact – Veronica Pletsch | Homepage</title>
+<title>email_form – Veronica Pletsch | Homepage</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -127,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
     </span>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./contact.html" aria-current="page"> 
+    <a class="nav-link" href="./contact.html"> 
 <span class="menu-text">Contact</span></a>
   </li>  
 </ul>
@@ -150,19 +150,34 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div style="text-align: center; margin-bottom: 50px;">
-<p><img src="images/Me.png" class="img-fluid" style="border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);;width:60.0%"></p>
-</div>
-<div class="quarto-layout-panel" style="text-align: center;" data-layout-ncol="3">
+<div class="quarto-layout-panel" style="align-items: center; margin-top: 50px; margin-bottom: 50px;" data-layout-ncol="2">
 <div class="quarto-layout-row">
-<div id="linkedin" class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
-<p><a href="https://www.linkedin.com/in/veronica-pletsch-a49331100/"><i class="bi bi-linkedin" style="font-size: 3rem; color:  #fa70ff;"></i></a> <br><strong>LinkedIn</strong></p>
+<div id="image-col" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div style="text-align: center;">
+<p><img src="email.png" alt="Email" style="max-width: 100%; max-height: 500px; border-radius: 15px;"></p>
 </div>
-<div id="github" class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
-<p><a href="https://github.com/vmpletsch"><i class="bi bi-github" style="font-size: 3rem; color: #fa70ff;"></i></a> <br><strong>GitHub</strong></p>
 </div>
-<div id="email" class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
-<p><a href="email_form.html"> <i class="bi bi-envelope-fill" style="font-size: 3rem; color:  #fa70ff;"></i> </a> <br><strong>Email</strong></p>
+<div id="form-col" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div style="background: #ffffff; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 1px solid #f0f0f0;">
+  <div class="mb-4">
+    <label for="toEmail" class="form-label" style="font-weight: 600; font-size: 1.1rem; color: #333;">To</label>
+    <div class="input-group" title="Want to copy Veronica's email address?">
+      <input type="text" class="form-control" id="toEmail" value="vmpletsch@gmail.com" readonly="" style="background-color: #f8f9fa; font-size: 1.05rem;">
+      <button class="btn btn-outline-secondary" type="button" onclick="navigator.clipboard.writeText('vmpletsch@gmail.com'); alert('Email address copied!');">
+        <i class="bi bi-clipboard"></i> Copy
+      </button>
+    </div>
+  </div>
+  <div class="mb-4">
+    <label for="customMessage" class="form-label" style="font-weight: 600; font-size: 1.1rem; color: #333;">Message</label>
+    <textarea class="form-control" id="customMessage" rows="8" placeholder="Write your message here..." style="font-size: 1.05rem;" oninput="document.getElementById('sendEmailBtn').href = 'mailto:vmpletsch@gmail.com?body=' + encodeURIComponent(this.value);"></textarea>
+  </div>
+  <div class="text-center" style="margin-top: 30px;">
+    <a id="sendEmailBtn" href="mailto:vmpletsch@gmail.com" class="btn btn-primary" style="background-color: #fa70ff; border-color: #fa70ff; width: 100%; font-weight: bold; font-size: 1.1rem; border-radius: 8px; padding: 12px;">
+      Send Message
+    </a>
+  </div>
+</div>
 </div>
 </div>
 </div>
