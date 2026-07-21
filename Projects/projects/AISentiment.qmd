@@ -1,6 +1,6 @@
 ---
-title: "AI Sentiment"
-subtitle: 'Dissecting Public Sentiment on AI by Demographics'
+title: "AI Sentiment: Dissecting Public Sentiment on AI by Demographics"
+description: "xxx"
 categories: ["Shiny"]
 date: "2026-03-11"
 image: "../../previews/Project_2.png"
@@ -8,7 +8,7 @@ toc: false
 page-layout: full
 ---
 
-**GitHub Repository:** [\[Link to GitHub Repository\]](https://github.com/vmpletsch)
+**GitHub Repository:** [\[Link to AI-Sentiment-by-Demographics\]](https://github.com/vmpletsch/AI-Sentiment-by-Demographics)
 
 **Skills Demonstrated:** 
 - \[Skill 1\]

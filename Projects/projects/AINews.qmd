@@ -1,12 +1,21 @@
 ---
-title: "AI Within News Media Discourse"
-subtitle: "Interactive Shiny Dashboard"
+title: "AI Within News Media Discourse: Interactive Shiny Dashboard"
+description: "xxx"
 categories: ["Shiny"]
 date: "2026-03-11"
 image: "../../previews/Projects_1.png"
 toc: false
 page-layout: full
 ---
+
+**GitHub Repository:** [\[AI-SCM-and-US-Media-MA-Thesis\]](https://github.com/vmpletsch/AI-SCM-and-US-Media-MA-Thesis)
+
+**Skills Demonstrated:** 
+- \[Skill 1\]
+- \[Skill 2\]
+- \[Skill 3\]
+
+<br>
 
 <iframe src="https://3vw3oh-veronica-pletsch.shinyapps.io/shiny/" width="100%" height="950px" style="border: none; overflow: hidden;">
   This browser does not support iframes. Please view the dashboard directly at https://3vw3oh-veronica-pletsch.shinyapps.io/shiny/.
