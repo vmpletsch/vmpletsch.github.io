@@ -1,6 +1,6 @@
 ---
 title: "AI Within News Media Discourse: Interactive Shiny Dashboard"
-description: "xxx"
+description: "An interactive R Shiny dashboard visualizing a diachronic NLP analysis of AI framing within U.S. news media (2000-2024) using the Stereotype Content Model."
 categories: ["Shiny"]
 date: "2026-03-11"
 image: "../../previews/Projects_1.png"
@@ -11,9 +11,19 @@ page-layout: full
 **GitHub Repository:** [\[AI-SCM-and-US-Media-MA-Thesis\]](https://github.com/vmpletsch/AI-SCM-and-US-Media-MA-Thesis)
 
 **Skills Demonstrated:** 
-- \[Skill 1\]
-- \[Skill 2\]
-- \[Skill 3\]
+- \[Natural Language Processing\]
+- \[Sentiment Analysis\]
+- \[Web Scraping\]
+- \[R Shiny\]
+- \[R/RStudio\]
+- \[Data Visualization\]
+- \[Data Wrangling\]
+- \[Multivariate Analysis\]
+- \[Mixed Methods (Qual/Quant)\]
+- \[Topic Modeling\]
+- \[Model Evaluation\]
+- \[Study Design\]
+- \[Report Writing and Data Dissemination\]
 
 <br>
 

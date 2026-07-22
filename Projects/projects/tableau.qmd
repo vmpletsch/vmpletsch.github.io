@@ -1,6 +1,6 @@
 ---
-title: "Nomenclature Trends"
-subtitle: "A Longitudinal Study of Veronica"
+title: "Nomenclature Trends: A Longitudinal Study of Veronica"
+description: "A Tableau data visualization project exploring longitudinal nomenclature trends of the name 'Veronica'."
 categories: ["Tableau"]
 date: "2026-02-16"
 image: "../../previews/Projects_5.png"
@@ -8,6 +8,18 @@ toc: false
 page-layout: full
 resources: ["../datavizhw4complete.pptx.pdf"]
 ---
+
+*Note: The actual Tableau dashboard is not available due to a paywall prohibiting me from publishing to the Tableau website. Thus, the Tableau presentation below is not interactive and is provided as a static PDF.*
+
+**GitHub Repository:** *Note: The original RStudio repository that included the data wrangling of the raw files has been lost.*
+
+**Skills Demonstrated:** 
+- \[Tableau\]
+- \[Visualization\]
+- \[Data Wrangling\]
+- \[R\]
+
+<br>
 
 <iframe src="../datavizhw4complete.pptx.pdf#view=Fit" style="width: 100%; aspect-ratio: 16 / 9; border: none; min-height: 500px;">
   This browser does not support PDFs. Please download the PDF to view it.

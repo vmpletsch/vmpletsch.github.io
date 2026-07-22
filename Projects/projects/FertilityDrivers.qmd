@@ -1,12 +1,29 @@
 ---
-title: "Fertility Drivers"
-subtitle: "An Interactive Analysis of Global Birth Rates"
+title: "Fertility Drivers: An Interactive Analysis of Global Birth Rates"
+description: "An interactive R Shiny dashboard analyzing global birth rates and their key socio-economic fertility drivers."
 categories: ["Shiny"]
 date: "2026-03-02"
 image: "../../previews/Projects_4.png"
 toc: false
 page-layout: full
 ---
+
+**GitHub Repository:** [\[Link to GitHub Repository\]](https://github.com/vmpletsch)
+
+**Skills Demonstrated:** 
+- \[R Shiny\]
+- \[R/RStudio\]
+- \[Data Visualization\]
+- \[Data Wrangling\]
+- \[Geo-spatial Analysis\]
+- \[Multivariate Analysis\]
+- \[Time-Series Analysis\]
+- \[Econometric Modeling\]
+- \[Interactive Dashboards\]
+- \[UI/UX Design\]
+- \[Report Writing and Data Dissemination\]
+
+<br>
 
 <div class="shiny-iframe-container" style="width: 100%; height: 750px; overflow: hidden; border: 2px solid #881ca3; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
   <object data="https://3vw3oh-veronica-pletsch.shinyapps.io/shinyapp/" 

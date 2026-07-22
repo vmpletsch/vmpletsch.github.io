@@ -1,6 +1,6 @@
 ---
 title: "AI Sentiment: Dissecting Public Sentiment on AI by Demographics"
-description: "xxx"
+description: "An interactive R Shiny dashboard analyzing public sentiment toward AI across various demographic intersections using Pew Research Center survey data."
 categories: ["Shiny"]
 date: "2026-03-11"
 image: "../../previews/Project_2.png"
@@ -8,12 +8,19 @@ toc: false
 page-layout: full
 ---
 
-**GitHub Repository:** [\[Link to AI-Sentiment-by-Demographics\]](https://github.com/vmpletsch/AI-Sentiment-by-Demographics)
+**GitHub Repository:** [\[AI-Sentiment-by-Demographics\]](https://github.com/vmpletsch/AI-Sentiment-by-Demographics)
 
 **Skills Demonstrated:** 
-- \[Skill 1\]
-- \[Skill 2\]
-- \[Skill 3\]
+- \[R Shiny\]
+- \[R/RStudio\]
+- \[Data Visualization\]
+- \[Data Wrangling\]
+- \[Survey Analysis\]
+- \[Interactive Dashboards\]
+- \[Report Writing and Data Dissemination\]
+- \[UI/UX Design\]
+- \[ggplot\]
+- \[plotly\]
 
 <br>
 
