@@ -1,50 +1,39 @@
 project:
   type: website
-  output-dir: docs
-  resources:
-    - resume.pdf
-    - V_Pletsch_CV.pdf
+  output-dir: .
 
 website:
-  title: "Veronica Pletsch | Homepage"
-  description: "Veronica Pletsch portfolio: social scientist, data scientist & UChicago alumna. Discovering the hidden logic of familiar things through research."
-  favicon: favicon.png
+  title: "Veronica Pletsch"
   navbar:
     background: transparent
     search: true
     right:
-      - text: "Presentations"
-        href: presentations.qmd
       - text: "Projects"
-        href: projects.qmd
-      - text: "Resume"
-        href: experience.qmd
+        menu:
+          - text: "MACS Final"
+            href: text.qmd
+          - text: "Global Fertility Drivers"
+            href: text2.qmd
+      - text: "About"
+        menu:
+          - text: "Resume"
+            href: resume.qmd
+          - text: "CV"
+            href: cv.qmd
       - text: "Writing Samples"
-        href: writingsamplese.qmd
-      - text: "|"
-      - text: "Contact"
-        href: contact.qmd
-    
-  page-footer:
-    left: "<div id='footer'></div>"
-    right:
+        href: veronica.qmd
       - icon: github
         href: https://github.com/vmpletsch
-      - icon: linkedin
-        href: http://linkedin.com/in/veronica-pletsch-a49331100
-      - icon: envelope
-        href: vmpletsch@gmail.com
 
 format:
   html:
-    include-in-header: schema.html
-    embed-resources: false
+    embed-resources: true
     theme: cosmo
     css: 
-      - custom.css
+      - vistales.css
     toc: true
     toc-location: left
     google-fonts:
       - family: Fraunces
       - family: Montserrat
-      - family: DM Serif Display
+    include-in-header: umami.html
