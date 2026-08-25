@@ -41,7 +41,7 @@ format:
 ```{=html}
 <div class="latest-work-grid">
   <a class="latest-work-card" href="Projects/projects/AINews.html">
-    <img src="previews/latest-work-ai-news-crop.png" alt="Preview of Veronica Pletsch's AI Within News Media Discourse interactive dashboard">
+    <img src="previews/latest-work-ai-news-crop.png?v=20260825-2" alt="Preview of Veronica Pletsch's AI Within News Media Discourse interactive dashboard">
     <span class="latest-work-label">Featured thesis project</span>
     <h3>AI Within News Media Discourse</h3>
     <p>Interactive R Shiny dashboard examining how U.S. news media framed artificial intelligence from 2000–2024.</p>
@@ -55,7 +55,7 @@ format:
     <span class="latest-work-link">View the project <i class="bi bi-arrow-right latest-work-arrow" aria-hidden="true"></i></span>
   </a>
   <a class="latest-work-card" href="Projects/projects/FertilityDrivers.html">
-    <img src="previews/latest-work-fertility-crop.png" alt="Preview of Veronica Pletsch's Fertility Drivers interactive dashboard">
+    <img src="previews/latest-work-fertility-crop.png?v=20260825-2" alt="Preview of Veronica Pletsch's Fertility Drivers interactive dashboard">
     <span class="latest-work-label">Data visualization</span>
     <h3>Fertility Drivers</h3>
     <p>Interactive analysis of global birth rates and the socioeconomic factors associated with fertility patterns.</p>
