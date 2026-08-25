@@ -1,5 +1,7 @@
 ---
 title: ""
+description: "Contact Veronica Pletsch for data science, social science research, computational social science, and front-end development opportunities."
+image: "images/veronica-pletsch-profile.jpg"
 page-layout: full
 format: 
   html:
@@ -8,7 +10,7 @@ toc: false
 ---
 
 <div style="text-align: center; margin-bottom: 50px;">
-  ![](images/Me.png){width="60%" style="border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"}
+  <img src="images/Me.png" alt="Veronica Pletsch" style="width: 60%; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
 </div>
 
 ```{=html}

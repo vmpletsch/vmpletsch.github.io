@@ -1,5 +1,6 @@
 ---
 title: "Presentations"
+description: "Research presentations by Veronica Pletsch on social science, computational research, public health, and data analysis."
 listing:
   contents: Presentations
   type: grid

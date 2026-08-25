@@ -1,5 +1,6 @@
 ---
 title: "Experience"
+description: "Professional experience, technical skills, resume, and CV for Veronica Pletsch, a data scientist, social science researcher, and front-end developer."
 page-layout: full
 toc: false
 format:
@@ -11,10 +12,10 @@ format:
 ## Brief overview of my professional experience, skills, and a PDF download of my resume and CV. 
 
 <div class="d-flex justify-content-center gap-3 mb-5" style="margin-top: 30px;">
-  <a href="resume.pdf" target="_blank" class="btn btn-primary download-btn">
+  <a href="Experience/resume.pdf" target="_blank" rel="noopener" class="btn btn-primary download-btn">
     <i class="bi bi-file-earmark-pdf"></i> Download Resume
   </a>
-  <a href="V_Pletsch_CV.pdf" target="_blank" class="btn btn-outline-primary download-btn">
+  <a href="Experience/V_Pletsch_CV.pdf" target="_blank" rel="noopener" class="btn btn-outline-primary download-btn">
     <i class="bi bi-file-earmark-person"></i> Download CV
   </a>
 </div>
@@ -23,6 +24,20 @@ format:
 
 ::: {.g-col-7}
 ::: {.timeline}
+
+::: {.timeline-item}
+::: {.timeline-dot}
+:::
+::: {.timeline-content}
+### Front-end Developer
+#### Stealth Startup (Confidential)
+
+* Led front-end architecture development for a SaaS platform using Next.js, React, and TypeScript.
+* Designed and implemented UI/UX components with Tailwind CSS and Framer Motion.
+* Established REST APIs, a user signup/login pipeline, and cookie-based engagement telemetry.
+* Created static and animated pixel art for the startup's branding using Aseprite.
+:::
+:::
   
 ::: {.timeline-item}
 ::: {.timeline-dot}
@@ -34,6 +49,9 @@ format:
 * Co-authored award-winning grant proposals.
 * Co-designed survey.
 * Wrangled largescale qualitative and quantitative datasets in SPSS, NVivo, and MAXQDA.
+* Co-authored grant proposals securing more than $100,000 in CDC and NIJ funding.
+* Screened, recruited, scheduled, and interviewed more than 100 participants for VTTI Traffic Safety focus groups.
+* Founded and led the GWG Youth Advisory Group and co-developed a CMS Office of Minority Health provider toolkit.
 :::
 :::
 
@@ -41,7 +59,7 @@ format:
 ::: {.timeline-dot}
 :::
 ::: {.timeline-content}
-### Graduate Research Assistant
+### Graduate Intern
 #### NORC at the University of Chicago, The Bridge
 
 * Researched hierarchy formation and its correlation with socioeconomic status.
@@ -79,10 +97,10 @@ format:
 ::: {.timeline-dot}
 :::
 ::: {.timeline-content}
-### Research Intern
+### Translation Intern
 ####  Junior Achievement, Buenos Aires
 
-* Conducted partnership outreach, recruiting international nongovernmental organizations and corporations to invest in local Latin American communities.
+* Translated Spanish program material for financial partners and stakeholders.
 
 :::
 :::
@@ -94,9 +112,27 @@ format:
 ### Policy Intern
 ####  Chicago Ward Alderman
 
-* Organized Town Hall meetings between the Alderman and constituents.
-* Drafted policy memos, took notes for city council meetings, prepped materials for meetings between the Alderman and community organizations and local businesses.
+* Researched the effects of proposed ordinances and briefed the Alderman's director of policy and communications.
+* Organized community meetings, food drives, and holiday drives.
 
+:::
+:::
+
+::: {.timeline-item}
+::: {.timeline-dot}
+:::
+::: {.timeline-content}
+### English Tutor
+#### Aquinas Literacy Center, Chicago, IL
+:::
+:::
+
+::: {.timeline-item}
+::: {.timeline-dot}
+:::
+::: {.timeline-content}
+### English Tutor
+#### Qosqo Maki, Cusco, Peru
 :::
 :::
 :::
@@ -130,11 +166,14 @@ format:
     * Python
     * LaTeX
     * SQL
+    * Git/GitHub
+    * AI Prompt Engineering
     
 * **Data Science**
     * NLP BERTopic
     * FinBERT
     * Topic Modeling (LDA, Dynamic, Gamma/Beta Parameters) 
+    * Machine Learning
     * Granger Causality
     * Geo-spatial Analysis
     * Data Wrangling
@@ -142,6 +181,8 @@ format:
     * Model Evaluation (Coherence, Perplexity)
     * Econometric Modeling
     * Multivariate Analysis
+    * A/B Testing
+    * Component-Based Architecture
 
 * **Statistics**
     * Bayesian Inference
@@ -149,6 +190,8 @@ format:
     * Propensity Score Matching
     * Difference-in-Difference
     * Interrupted Time-Series
+    * Non-parametric Statistical Tests
+    * Regressions
     
  * **Research**
     * Mixed Methods (Qual/Quant)
@@ -161,6 +204,8 @@ format:
     * Study Design
     * Study Recruitment
     * Surveys
+    * Web Scraping
+    * Third-Party Data
 
  * **Softwares**
     * MAXQDA
@@ -173,6 +218,24 @@ format:
     * Microsoft 365
     * Tableau
     * RShiny
+    * Google BigQuery
+    * RStudio
+    * Canva
+    * React
+    * Next.js
+    * Tailwind CSS
+    * Framer Motion
+    * Clerk
+    * Vercel
+
+ * **Visualization & Design**
+    * Tableau
+    * RShiny
+    * Quarto
+    * Overleaf
+    * Front-end Web Development
+    * UI/UX Design
+    * Aseprite
     
 
 :::

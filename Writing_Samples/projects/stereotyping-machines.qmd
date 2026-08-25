@@ -1,0 +1,12 @@
+---
+title: "STEREOTYPING MACHINES? A COMPUTATIONAL SENTIMENT ANALYSIS OF A.I. IN U.S. NEWS MEDIA (2000–2024)"
+categories: ["quantitative analysis"]
+date: "2026-08-04"
+image: "../../images/veronica-pletsch-profile.jpg"
+toc: false
+page-layout: full
+---
+
+<iframe src="../MA-Thesis-Final_Website.pdf" width="100%" height="800px" style="border: none;">
+  This browser does not support PDFs. Please download the PDF to view it.
+</iframe>

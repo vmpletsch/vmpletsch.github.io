@@ -1,5 +1,6 @@
 ---
 title: "Projects"
+description: "Data science and computational social science projects by Veronica Pletsch, including data visualization, Shiny, Tableau, NLP, and quantitative research."
 listing:
   contents: Projects
   type: grid
@@ -15,4 +16,4 @@ page-layout: full
 
 ---
 
-## Curated gallery of my most recent quanitative data visualization projects, featuring my use of Shiny and Tableau. 
+## Curated gallery of my most recent quanitative data visualization projects, featuring my use of Shiny and Tableau.

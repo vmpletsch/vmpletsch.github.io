@@ -9,6 +9,20 @@
     ]
   },
   {
+    "listing": "/writingsamplese.html",
+    "items": [
+      "/Writing_Samples/projects/stereotyping-machines.html",
+      "/Writing_Samples/projects/Agencyolicies.html",
+      "/Writing_Samples/projects/policeuof.html",
+      "/Writing_Samples/projects/undergradcapstone.html",
+      "/Writing_Samples/projects/VAW.html"
+    ]
+  },
+  {
+    "listing": "/Experience/experienceindex.html",
+    "items": []
+  },
+  {
     "listing": "/projects.html",
     "items": [
       "/Projects/projects/AISentiment.html",
@@ -17,15 +31,6 @@
       "/Projects/projects/FertilityDrivers.html",
       "/Projects/projects/tableau.html",
       "/Projects/projects/problemset.html"
-    ]
-  },
-  {
-    "listing": "/writingsamplese.html",
-    "items": [
-      "/Writing_Samples/projects/Agencyolicies.html",
-      "/Writing_Samples/projects/policeuof.html",
-      "/Writing_Samples/projects/undergradcapstone.html",
-      "/Writing_Samples/projects/VAW.html"
     ]
   }
 ]

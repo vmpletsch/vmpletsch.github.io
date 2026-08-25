@@ -39,10 +39,11 @@ The datasets used for this assignment were pulled from the Correlates of War Pro
 
 ```{r, echo=FALSE}
 
-library(tidyverse) #used for the dplyr left_join function to combine datasets
+library(dplyr) #used for the dplyr left_join function to combine datasets
                    #used to %>% various segments of my code together
                    #used for functions: group_by, arrange, mutate, select, recode, 
                    #used for ggplot to make basic graph 
+library(ggplot2)
 
 
 
@@ -252,7 +253,8 @@ write.csv(merged_wars, "merged_wars.csv", row.names = FALSE)
 
 ```{r, echo=FALSE, fig.width=8, fig.height=5}
 #Plot a histogram of your deaths per capita distribution and make sure you see the long tail
-library(tidyverse)
+library(dplyr)
+library(ggplot2)
 library(scales)
 library(plotly)
 
@@ -294,7 +296,8 @@ ggplotly(p_hist)
 ```{r, echo=FALSE}
 #Plot deaths per capita against the year, and see if you notice a pattern.
 
-library(tidyverse)
+library(dplyr)
+library(ggplot2)
 library(plotly)
 library(scales)
 
@@ -418,7 +421,8 @@ kable(results_table, caption = "Statistical Modeling Results: Power-Law Alpha Pa
 ```
 
 ```{r, echo=FALSE, fig.width=8, fig.height=5}
-library(tidyverse)
+library(dplyr)
+library(ggplot2)
 library(plotly)
 
 simulated_parameters <- data.frame(diff = alpha_differences)

@@ -8,7 +8,7 @@ toc: false
 page-layout: full
 ---
 
-**GitHub Repository:** [\[Link to GitHub Repository\]](https://github.com/vmpletsch)
+**GitHub Repository:** <a href="https://github.com/vmpletsch" style="color: #fa70ff; font-weight: bold; text-decoration: none;">[Link to GitHub Repository]</a>
 
 **Skills Demonstrated:** 
 - \[R Shiny\]

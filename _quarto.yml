@@ -1,39 +1,59 @@
 project:
   type: website
-  output-dir: .
+  # GitHub Pages publishes the rendered site from this directory.
+  output-dir: docs
+  resources:
+    - V_Pletsch_CV.pdf
+    - Experience/resume.pdf
+    - Experience/V_Pletsch_CV.pdf
 
 website:
-  title: "Veronica Pletsch"
+  title: "Veronica Pletsch | Homepage"
+  description: "Veronica Pletsch portfolio: social scientist, data scientist & UChicago alumna. Discovering the hidden logic of familiar things through research."
+  site-url: "https://veronicapletsch.com"
+  image: "images/veronica-pletsch-profile.jpg"
+  open-graph: true
+  twitter-card: true
+  favicon: favicon.png
   navbar:
     background: transparent
     search: true
     right:
+      - text: "Presentations"
+        href: presentations.qmd
       - text: "Projects"
-        menu:
-          - text: "MACS Final"
-            href: text.qmd
-          - text: "Global Fertility Drivers"
-            href: text2.qmd
-      - text: "About"
-        menu:
-          - text: "Resume"
-            href: resume.qmd
-          - text: "CV"
-            href: cv.qmd
+        href: projects.qmd
+      - text: "Resume"
+        href: experience.qmd
       - text: "Writing Samples"
-        href: veronica.qmd
+        href: writingsamplese.qmd
+      - text: "|"
+      - text: "Contact"
+        href: contact.qmd
+
+  page-footer:
+    left: "<div id='footer'></div>"
+    right:
       - icon: github
         href: https://github.com/vmpletsch
+      - icon: linkedin
+        href: http://linkedin.com/in/veronica-pletsch-a49331100
+      - icon: envelope
+        href: vmpletsch@gmail.com
 
 format:
   html:
-    embed-resources: true
+    include-in-header:
+      - schema.html
+      - umami.html
+    embed-resources: false
+    canonical-url: true
     theme: cosmo
-    css: 
-      - vistales.css
+    css:
+      - custom.css
     toc: true
     toc-location: left
     google-fonts:
       - family: Fraunces
       - family: Montserrat
-    include-in-header: umami.html
+      - family: DM Serif Display
