@@ -1,6 +1,6 @@
 ---
 title: "Writing Samples"
-description: "Writing samples and research publications by Veronica Pletsch, covering computational social science, public health, policy, and social research."
+description: "Writing samples and research publications covering computational social science, public health, policy, and social research."
 listing:
   contents: Writing_Samples/projects
   type: grid

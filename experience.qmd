@@ -1,6 +1,6 @@
 ---
 title: "Resume"
-description: "Professional experience, technical skills, resume, and CV for Veronica Pletsch, a data scientist, social science researcher, and front-end developer."
+description: "Professional experience, technical skills, resume, and curriculum vitae."
 page-layout: full
 toc: false
 format:
