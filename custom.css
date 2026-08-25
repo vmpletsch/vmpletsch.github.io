@@ -238,53 +238,32 @@ body {
   animation: tracking-in-expand 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
-/* UX & Product Design scrollytelling page */
-.ux-page { color: #1c1720; }
-.ux-page h1, .ux-page h2, .ux-page h3 { font-family: "DM Serif Display", serif; color: #1c1720; }
-.ux-hero, .ux-section, .ux-next { max-width: 1120px; margin: 0 auto; padding: 92px 32px; }
-.ux-hero { min-height: 72vh; display: flex; flex-direction: column; justify-content: center; }
-.ux-eyebrow, .ux-case-number { margin: 0 0 14px; color: #881ca3; font-size: .76rem; font-weight: 800; letter-spacing: .14em; }
-.ux-hero h1 { font-size: clamp(3.1rem, 8vw, 6.8rem); line-height: .9; max-width: 850px; margin: 0; }
-.ux-lede { max-width: 690px; margin: 28px 0 0; font-size: clamp(1.15rem, 2vw, 1.45rem); line-height: 1.55; }
-.ux-jump-nav { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 38px; }
-.ux-jump-nav a, .ux-tags span { border: 1px solid rgba(136, 28, 163, .35); border-radius: 999px; padding: 8px 13px; color: #881ca3; font-weight: 700; font-size: .82rem; }
-.ux-jump-nav a:hover { background: #881ca3; color: #fff; text-decoration: none; }
-.ux-section { border-top: 1px solid rgba(28, 23, 32, .15); }
-.ux-section-heading { max-width: 720px; margin-bottom: 42px; }
-.ux-section-heading h2 { font-size: clamp(2.25rem, 5vw, 4rem); margin: 0 0 14px; }
-.ux-section-heading > p:last-child { font-size: 1.12rem; line-height: 1.6; }
-.ux-case-study { background: #fff; border: 1px solid rgba(28, 23, 32, .12); border-radius: 22px; overflow: hidden; box-shadow: 0 18px 48px rgba(54, 24, 61, .08); }
-.ux-case-study-featured, .ux-web-case { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(340px, .92fr); }
-.ux-case-visual { min-height: 260px; background: #e9d7f2; overflow: hidden; }
-.ux-case-visual img { display: block; width: 100%; height: 100%; min-height: 100%; object-fit: cover; object-position: center; transition: transform .45s ease; }
-.ux-case-study:hover .ux-case-visual img { transform: scale(1.035); }
-.ux-case-copy { padding: clamp(26px, 4vw, 48px); }
-.ux-case-copy h3 { font-size: clamp(1.8rem, 3vw, 2.65rem); margin: 0 0 16px; }
-.ux-case-copy p { line-height: 1.58; }
-.ux-problem { font-size: 1.06rem; }
-.ux-decisions { margin: 22px 0; padding-left: 20px; }
-.ux-decisions li { margin-bottom: 12px; line-height: 1.5; }
-.ux-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0; }
-.ux-tags span { color: #4c265a; background: #faf4fd; font-size: .72rem; }
-.ux-actions { display: flex; flex-wrap: wrap; gap: 18px; margin: 25px 0 0; }
-.ux-actions a, .ux-text-link, .ux-next a { color: #881ca3; font-weight: 800; }
-.ux-case-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 25px; margin-top: 25px; }
-.ux-case-study-compact { display: flex; flex-direction: column; }
-.ux-case-study-compact .ux-case-visual { height: 265px; }
-.ux-case-study-compact .ux-case-copy { flex: 1; }
-.ux-case-study-compact h3 { font-size: 2rem; }
-.ux-section-tint { max-width: none; padding-left: max(32px, calc((100vw - 1056px) / 2)); padding-right: max(32px, calc((100vw - 1056px) / 2)); background: linear-gradient(135deg, #f7ebfb, #eff0ff); }
-.ux-section-tint .ux-section-heading, .ux-section-tint .ux-web-case { max-width: 1056px; margin-left: auto; margin-right: auto; }
-.ux-web-art { min-height: 390px; padding: 24px; background: #25112f; display: flex; align-items: flex-start; gap: 7px; }
-.ux-browser-dot { width: 11px; height: 11px; border-radius: 50%; background: #f6a0d1; }
-.ux-browser-dot:nth-child(2) { background: #f4db84; }.ux-browser-dot:nth-child(3) { background: #a7e6bf; }
-.ux-browser-content { position: absolute; align-self: center; width: min(36vw, 420px); color: #fff; }
-.ux-browser-content p { font-family: "DM Serif Display", serif; font-size: clamp(1.5rem, 3vw, 2.8rem); letter-spacing: .04em; }
-.ux-browser-content div { height: 14px; margin: 15px 0; background: linear-gradient(90deg, #fa70ff, #d8e5ff); border-radius: 99px; }.ux-browser-content div:nth-of-type(2) { width: 76%; }.ux-browser-content div:nth-of-type(3) { width: 48%; }
-.ux-principles-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-.ux-principles-grid article { min-height: 230px; padding: 30px; border-left: 4px solid #881ca3; background: #fff; box-shadow: 0 10px 24px rgba(54, 24, 61, .06); }.ux-principles-grid span { color: #881ca3; font-weight: 800; }.ux-principles-grid h3 { font-size: 1.55rem; margin: 20px 0 10px; }.ux-principles-grid p { line-height: 1.55; }
-.ux-next { text-align: center; border-top: 1px solid rgba(28, 23, 32, .15); }.ux-next h2 { max-width: 780px; margin: 0 auto 18px; font-size: clamp(2rem, 4.5vw, 3.8rem); }.ux-next p { max-width: 590px; margin: 0 auto 26px; line-height: 1.55; }
-@media (max-width: 820px) { .ux-hero, .ux-section, .ux-next { padding: 65px 22px; }.ux-case-study-featured, .ux-web-case, .ux-case-grid, .ux-principles-grid { grid-template-columns: 1fr; }.ux-case-study-featured .ux-case-visual { min-height: 280px; }.ux-section-tint { padding-left: 22px; padding-right: 22px; }.ux-browser-content { width: calc(100% - 48px); }.ux-case-study-compact .ux-case-visual { height: 220px; } }
+/* UX & Product Design holding page */
+.ux-maintenance {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 72vh;
+  padding: 48px 24px;
+  text-align: center;
+}
+.ux-maintenance > p:first-child {
+  color: #881ca3;
+  font-size: .8rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  margin: 0 0 14px;
+}
+.ux-maintenance h1 {
+  color: #881ca3;
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  margin: 0;
+}
+.ux-maintenance > p:last-child {
+  font-size: 1.15rem;
+  margin: 18px 0 0;
+}
 
 .footer,
 .nav-footer {
