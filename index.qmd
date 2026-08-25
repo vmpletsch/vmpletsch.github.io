@@ -48,7 +48,7 @@ format:
     <span class="latest-work-link">Explore the dashboard <i class="bi bi-arrow-right latest-work-arrow" aria-hidden="true"></i></span>
   </a>
   <a class="latest-work-card" href="Projects/projects/AISentiment.html">
-    <img src="previews/latest-work-ai-sentiment-crop.png" alt="Preview of Veronica Pletsch's AI Sentiment by Demographics dashboard">
+    <img src="previews/latest-work-ai-sentiment 123.png" alt="Preview of Veronica Pletsch's AI Sentiment by Demographics dashboard">
     <span class="latest-work-label">Interactive analysis</span>
     <h3>AI Sentiment by Demographics</h3>
     <p>R Shiny dashboard analyzing public sentiment toward AI across demographic intersections using Pew Research Center survey data.</p>
