@@ -23,6 +23,8 @@ website:
         href: presentations.qmd
       - text: "Projects"
         href: projects.qmd
+      - text: "UX & Product Design"
+        href: ux-design.qmd
       - text: "Resume"
         href: experience.qmd
       - text: "Writing Samples"
