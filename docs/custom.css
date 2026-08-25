@@ -482,11 +482,6 @@ html {
   width: 100%;
 }
 
-/* The pacifier illustration sits slightly lower in its source artwork. */
-.latest-work-card:nth-child(3) img {
-  object-position: center 76%;
-}
-
 .latest-work-label {
   color: #6b426f;
   font-family: Montserrat, sans-serif !important;
