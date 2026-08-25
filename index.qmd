@@ -12,13 +12,14 @@ format:
 <style>
   #title-block-header { display: none !important; }
 </style>
+<link rel="stylesheet" href="custom.css?v=20260825-6">
 
 ::: {style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; max-width: 800px; margin: 0 auto; width: 100%;"}
 
 <h1 class="tracking-in-expand" style="font-size: 100px; margin-bottom: 0px; line-height: 1; font-family: 'DM Serif Display', serif; text-align: center; width: 100%;">Veronica Pletsch</h1>
 
 <div style="text-align: center; margin-top: 0px; margin-bottom: 50px;">
-  <img src="images/veronica_pletsch.jpg" alt="Professional portrait of Veronica Pletsch, data scientist and social science researcher" class="about-img" style="width: 50%;">
+  <img src="images/veronica-pletsch-profile.jpg" alt="Veronica Pletsch, data scientist and social science researcher" class="hero-portrait">
 </div>
 
 <h2 style="text-align: center; width: 100%; margin-bottom: 10px; margin-top: 0px;">Welcome to my portfolio</h2>
@@ -26,26 +27,45 @@ format:
 <p style="text-align: center; width: 100%; font-size: 1.2rem;">Data Scientist | Social Science Researcher</p>
 
 <div style="margin-top: 0px; margin-bottom: 200px">
-  <a href="#testimonials" class="scroll-down-arrow">
+  <a href="#latest-work" class="scroll-down-arrow" aria-label="Jump to latest work">
     <i class="bi bi-chevron-down" style="font-size: 3rem; color: #881ca3;"></i>
   </a>
 </div>
 :::
 
-::: {#testimonials class="testimonial-container"}
-## Testimonials
+::: {#latest-work class="latest-work-container"}
+## See My Latest Work
 
-<p class="testimonial-quote">"She regularly asks questions, is interested in learning new skills and methods for completing tasks and has asked for feedback on how she can grow. She is an active participant in her own growth and development.” </p>
-<p class="testimonial-author">—  former manager, NORC (performance review feedback)</p>
+<p class="latest-work-intro">A selection of recent research and interactive data projects spanning natural language processing, public-interest research, and data visualization.</p>
 
-<p class="testimonial-quote">"Veronica is a great team member! Her quality of work is consistently very high, and I have been impressed with how quickly she has learned new skills since starting at NORC. She asks very thoughtful questions to understand the “why” of tasks, which results in higher quality of work because she understands the project and project needs in depth."</p>
-<p class="testimonial-author">— former project director, NORC (performance review feedback)</p>
-
-<p class="testimonial-quote">"Not only is she a talented quantitative and qualitative social researcher, but she never skips the opportunity to help an old lady cross the street."</p>
-<p class="testimonial-author">— my mom, a pretty cool lady</p>
+```{=html}
+<div class="latest-work-grid">
+  <a class="latest-work-card" href="Projects/projects/AINews.html">
+    <img src="previews/Projects_1.png" alt="Preview of Veronica Pletsch's AI Within News Media Discourse interactive dashboard">
+    <span class="latest-work-label">Featured thesis project</span>
+    <h3>AI Within News Media Discourse</h3>
+    <p>Interactive R Shiny dashboard examining how U.S. news media framed artificial intelligence from 2000–2024.</p>
+    <span class="latest-work-link">Explore the dashboard <i class="bi bi-arrow-right latest-work-arrow" aria-hidden="true"></i></span>
+  </a>
+  <a class="latest-work-card" href="Projects/projects/AISentiment.html">
+    <img src="previews/Project_2.png" alt="Preview of Veronica Pletsch's AI Sentiment by Demographics dashboard">
+    <span class="latest-work-label">Interactive analysis</span>
+    <h3>AI Sentiment by Demographics</h3>
+    <p>R Shiny dashboard analyzing public sentiment toward AI across demographic intersections using Pew Research Center survey data.</p>
+    <span class="latest-work-link">View the project <i class="bi bi-arrow-right latest-work-arrow" aria-hidden="true"></i></span>
+  </a>
+  <a class="latest-work-card" href="Projects/projects/FertilityDrivers.html">
+    <img src="previews/Projects_4.png" alt="Preview of Veronica Pletsch's Fertility Drivers interactive dashboard">
+    <span class="latest-work-label">Data visualization</span>
+    <h3>Fertility Drivers</h3>
+    <p>Interactive analysis of global birth rates and the socioeconomic factors associated with fertility patterns.</p>
+    <span class="latest-work-link">View the project <i class="bi bi-arrow-right latest-work-arrow" aria-hidden="true"></i></span>
+  </a>
+</div>
+```
 
 <div style="margin-top: 50px;">
-  <a href="#about" class="scroll-down-arrow">
+  <a href="#about" class="scroll-down-arrow" aria-label="Jump to about me">
     <i class="bi bi-chevron-down" style="font-size: 3rem; color: #881ca3;"></i>
   </a>
 </div>
@@ -56,16 +76,26 @@ format:
 
 Hey there! Before we get to the nerdy, fun stuff, here's some serious context. I am a first generation high school and college graduate, I was raised in poverty by a single teenage mom in Chicago. These details matter, they've shaped who I am both personally and professionally. It was poverty that influenced me to think critically and analytically in order to overcome the psychological, financial, and social barriers placed on me. It is from these experiences that I first became curious by the perplexing nature of human behavior, society, and social interactions. Ultimately, through my career as a social science researcher and data scientist, I strive to *"discover the hidden logic of familiar things"* to better understand our complex social world and to hopefully leave it better than I found it.
 
-On a lighter note, when I'm not giving myself musculoskeletal issues and heart palpitations from being hunched over my computer doing research with 400 milligrams of caffeine in my system, I like to dabble in my hobbies. I love playing with my cat Sabrina, who likes to loaf in her rice cooker box and offer side quests to passers-by. I also love to hit the gym as an amateur body builder and yes... I can totally dead-lift 675lbs. Want to know more? Uh-uh, you gotta offer me a BigMac or something before I put more info of myself on the internet!
+On a lighter note, when I'm not giving myself musculoskeletal issues and heart palpitations from being hunched over my computer doing research with 400 milligrams of caffeine in my system, I like to dabble in my hobbies. I love playing with my cat Sabrina, who likes to loaf in her rice cooker box and offer side quests to passers-by. I also love to hit the gym as an amateur bodybuilder and yes... I can totally deadlift 675 lbs. And of course, I love to travel!
 
 Anyway, while you're here, please explore my recent research projects, writing samples, and while you're at it, take a PDF copy of my resume as a souvenir of your trip here.
 
 Thanks for stopping by! 
 
-::: {layout-ncol=2 style="margin-top: 40px; center;"}
-![Lil Mama Sabrina](images/sabrina.png){.about-img}
-
-
-![Definitely me deadlifting and definitely not just my face over bodybuilder Bradley Martyn...](images/deadlifting.png){.about-img}
-:::
+```{=html}
+<div class="about-photo-row">
+  <figure>
+    <img src="images/sabrina.png" alt="Sabrina, Veronica Pletsch's cat, in her rice cooker box">
+    <figcaption>Lil Mama Sabrina</figcaption>
+  </figure>
+  <figure>
+    <img src="images/deadlifting.png" alt="Veronica Pletsch's face edited onto a bodybuilding photograph">
+    <figcaption>Definitely me deadlifting</figcaption>
+  </figure>
+  <figure>
+    <img src="images/veronica_pletsch.jpg" alt="Veronica Pletsch, data scientist and social science researcher">
+    <figcaption>Ms. Worldwide</figcaption>
+  </figure>
+</div>
+```
 :::

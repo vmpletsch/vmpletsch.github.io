@@ -15,7 +15,7 @@ page-layout: full
 - \[R/RStudio\]
 - \[Data Visualization\]
 - \[Data Wrangling\]
-- \[Geo-spatial Analysis\]
+- \[Geospatial Analysis\]
 - \[Multivariate Analysis\]
 - \[Time-Series Analysis\]
 - \[Econometric Modeling\]

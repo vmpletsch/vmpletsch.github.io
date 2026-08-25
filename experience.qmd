@@ -1,5 +1,5 @@
 ---
-title: "Experience"
+title: "Resume"
 description: "Professional experience, technical skills, resume, and CV for Veronica Pletsch, a data scientist, social science researcher, and front-end developer."
 page-layout: full
 toc: false
@@ -48,7 +48,7 @@ format:
 
 * Co-authored award-winning grant proposals.
 * Co-designed survey.
-* Wrangled largescale qualitative and quantitative datasets in SPSS, NVivo, and MAXQDA.
+* Wrangled large-scale qualitative and quantitative datasets in SPSS, NVivo, and MAXQDA.
 * Co-authored grant proposals securing more than $100,000 in CDC and NIJ funding.
 * Screened, recruited, scheduled, and interviewed more than 100 participants for VTTI Traffic Safety focus groups.
 * Founded and led the GWG Youth Advisory Group and co-developed a CMS Office of Minority Health provider toolkit.
@@ -159,83 +159,51 @@ format:
 </div>
 :::
 
-### Skills
+### Core Skills
 
-* **Programming**
-    * R
-    * Python
-    * LaTeX
-    * SQL
-    * Git/GitHub
-    * AI Prompt Engineering
-    
-* **Data Science**
-    * NLP BERTopic
-    * FinBERT
-    * Topic Modeling (LDA, Dynamic, Gamma/Beta Parameters) 
-    * Machine Learning
-    * Granger Causality
-    * Geo-spatial Analysis
-    * Data Wrangling
-    * Data Visualization
-    * Model Evaluation (Coherence, Perplexity)
-    * Econometric Modeling
-    * Multivariate Analysis
-    * A/B Testing
-    * Component-Based Architecture
+<p class="skills-intro">Select a category to view the full set of tools and methods.</p>
 
-* **Statistics**
-    * Bayesian Inference
-    * Regression Discontinuity Design
-    * Propensity Score Matching
-    * Difference-in-Difference
-    * Interrupted Time-Series
-    * Non-parametric Statistical Tests
-    * Regressions
-    
- * **Research**
-    * Mixed Methods (Qual/Quant)
-    * Ethnography
-    * Focus Groups
-    * Grant and Proposal Writing
-    * Interviewing
-    * IRB
-    * Report Writing and Data Dissemination
-    * Study Design
-    * Study Recruitment
-    * Surveys
-    * Web Scraping
-    * Third-Party Data
+<details class="skill-group">
+  <summary>Programming &amp; Software Development <span>R · Python · SQL · React · Next.js</span></summary>
+  <ul>
+    <li>R, Python, LaTeX, SQL, Git/GitHub, and AI Prompt Engineering</li>
+    <li>React, Next.js, Tailwind CSS, Framer Motion, Clerk, Vercel, and component-based architecture</li>
+    <li>Front-end web development, UI/UX design, and Aseprite</li>
+  </ul>
+</details>
 
- * **Softwares**
-    * MAXQDA
-    * NVivo
-    * Overleaf
-    * SPSS
-    * STATA
-    * Survey Monkey
-    * Qualtrics
-    * Microsoft 365
-    * Tableau
-    * RShiny
-    * Google BigQuery
-    * RStudio
-    * Canva
-    * React
-    * Next.js
-    * Tailwind CSS
-    * Framer Motion
-    * Clerk
-    * Vercel
+<details class="skill-group">
+  <summary>Data Science &amp; NLP <span>Sentiment analysis · Topic modeling · Visualization</span></summary>
+  <ul>
+    <li>NLP, BERTopic, FinBERT, and topic modeling (LDA, dynamic, Gamma/Beta parameters)</li>
+    <li>Machine learning, Granger causality, geospatial analysis, and econometric modeling</li>
+    <li>Data wrangling, data visualization, model evaluation (coherence, perplexity), multivariate analysis, and A/B testing</li>
+  </ul>
+</details>
 
- * **Visualization & Design**
-    * Tableau
-    * RShiny
-    * Quarto
-    * Overleaf
-    * Front-end Web Development
-    * UI/UX Design
-    * Aseprite
+<details class="skill-group">
+  <summary>Statistics &amp; Causal Inference <span>Bayesian inference · RDD · DiD</span></summary>
+  <ul>
+    <li>Bayesian inference, regression discontinuity design, propensity score matching, and difference-in-differences</li>
+    <li>Interrupted time-series analysis, nonparametric statistical tests, and regression analysis</li>
+  </ul>
+</details>
+
+<details class="skill-group">
+  <summary>Research Methods <span>Mixed methods · Study design · Interviews</span></summary>
+  <ul>
+    <li>Mixed methods (qualitative/quantitative), ethnography, focus groups, interviewing, surveys, and study recruitment</li>
+    <li>IRB, study design, grant and proposal writing, report writing, data dissemination, web scraping, and third-party data</li>
+  </ul>
+</details>
+
+<details class="skill-group">
+  <summary>Research &amp; Visualization Tools <span>Shiny · Tableau · Qualtrics · MAXQDA</span></summary>
+  <ul>
+    <li>R Shiny, Tableau, Quarto, RStudio, Google BigQuery, and Overleaf</li>
+    <li>MAXQDA, NVivo, SPSS, STATA, Qualtrics, SurveyMonkey, Microsoft 365, and Canva</li>
+  </ul>
+</details>
     
 
 :::

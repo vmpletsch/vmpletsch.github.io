@@ -16,4 +16,4 @@ page-layout: full
 
 ---
 
-## Curated gallery of my most recent quanitative data visualization projects, featuring my use of Shiny and Tableau.
+## Curated gallery of my most recent quantitative data visualization projects, featuring my use of Shiny and Tableau.

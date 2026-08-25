@@ -13,6 +13,15 @@ toc: false
   <img src="images/Me.png" alt="Veronica Pletsch" style="width: 60%; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
 </div>
 
+<section class="contact-intro" aria-labelledby="contact-heading">
+  <h1 id="contact-heading">Let's Connect</h1>
+  <p>Open to data science, research, and computational social science opportunities.</p>
+  <button class="copy-email-btn" id="copy-email" type="button" data-email="vmpletsch@gmail.com" aria-describedby="copy-email-status">
+    <i class="bi bi-clipboard"></i> Email Veronica
+  </button>
+  <span id="copy-email-status" class="visually-hidden" role="status" aria-live="polite"></span>
+</section>
+
 ```{=html}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
@@ -40,6 +49,36 @@ toc: false
     font-size: 1.1rem;
     color: #333;
   }
+  .contact-intro {
+    max-width: 720px;
+    margin: 0 auto 10px;
+    padding: 0 20px;
+    text-align: center;
+  }
+  .contact-intro h1 {
+    margin-bottom: 10px;
+  }
+  .contact-intro p {
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+  }
+  .copy-email-btn {
+    border: 2px solid #881ca3;
+    border-radius: 999px;
+    background: #881ca3;
+    color: #ffffff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: bold;
+    padding: 10px 18px;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  }
+  .copy-email-btn:hover,
+  .copy-email-btn:focus-visible {
+    background: #ffffff;
+    color: #881ca3;
+    transform: translateY(-2px);
+  }
 </style>
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 4vw; margin-top: 40px; align-items: flex-end;">
@@ -59,7 +98,7 @@ toc: false
   </div>
 
   <div class="contact-item">
-    <a href="email_form.html" style="text-decoration: none;">
+    <a href="mailto:vmpletsch@gmail.com" style="text-decoration: none;">
       <i class="bi bi-envelope-fill contact-icon"></i>
     </a>
     <span class="contact-text">Email</span>
@@ -80,4 +119,36 @@ toc: false
   </div>
 
 </div>
+
+<script>
+  document.getElementById('copy-email').addEventListener('click', async function () {
+    const button = this;
+    const email = button.dataset.email;
+    const status = document.getElementById('copy-email-status');
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(email);
+      } else {
+        const fallback = document.createElement('textarea');
+        fallback.value = email;
+        fallback.setAttribute('readonly', '');
+        fallback.style.position = 'fixed';
+        fallback.style.opacity = '0';
+        document.body.appendChild(fallback);
+        fallback.select();
+        const copied = document.execCommand('copy');
+        fallback.remove();
+        if (!copied) throw new Error('Copy command was unavailable.');
+      }
+      button.innerHTML = '<i class="bi bi-clipboard-check"></i> Email copied';
+      status.textContent = 'Email address copied to clipboard.';
+    } catch (error) {
+      button.innerHTML = '<i class="bi bi-envelope"></i> ' + email;
+      status.textContent = 'Copying was unavailable. The email address is now displayed.';
+    }
+    window.setTimeout(function () {
+      button.innerHTML = '<i class="bi bi-clipboard"></i> Email Veronica';
+    }, 2500);
+  });
+</script>
 ```

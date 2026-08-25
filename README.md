@@ -26,7 +26,7 @@ You will need to install the following software:
 You must install the necessary R packages before rendering the site:
 
 1. Plotly
-2. Ggplot2
+2. ggplot2
 3. Scales
 4. Shiny
 
@@ -34,4 +34,3 @@ You must install the necessary R packages before rendering the site:
 ### Data
 
 All datasets files are included in this repository (e.g., `gapminder_master.csv`, `gendereq_idea.csv`, `ppp.csv`, `religion.csv`). However, if desired you can use any dataset of your choice.
-

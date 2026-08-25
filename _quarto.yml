@@ -8,7 +8,7 @@ project:
     - Experience/V_Pletsch_CV.pdf
 
 website:
-  title: "Veronica Pletsch | Homepage"
+  title: "Veronica Pletsch"
   description: "Veronica Pletsch portfolio: social scientist, data scientist & UChicago alumna. Discovering the hidden logic of familiar things through research."
   site-url: "https://veronicapletsch.com"
   image: "images/veronica-pletsch-profile.jpg"
@@ -27,7 +27,6 @@ website:
         href: experience.qmd
       - text: "Writing Samples"
         href: writingsamplese.qmd
-      - text: "|"
       - text: "Contact"
         href: contact.qmd
 
