@@ -238,32 +238,48 @@ body {
   animation: tracking-in-expand 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
-/* UX & Product Design holding page */
-.ux-maintenance {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 72vh;
-  padding: 48px 24px;
-  text-align: center;
-}
-.ux-maintenance > p:first-child {
-  color: #881ca3;
-  font-size: .8rem;
-  font-weight: 800;
-  letter-spacing: .14em;
-  margin: 0 0 14px;
-}
-.ux-maintenance h1 {
-  color: #881ca3;
-  font-size: clamp(3rem, 8vw, 6.5rem);
-  margin: 0;
-}
-.ux-maintenance > p:last-child {
-  font-size: 1.15rem;
-  margin: 18px 0 0;
-}
+/* UX & Product Design interactive desktop */
+.ux-dashboard-page { box-sizing: border-box; display: grid; height: calc(100vh - 90px); left: 50%; margin-left: -50vw; overflow: hidden; padding: 12px; place-items: center; position: relative; width: 100vw; }
+.ux-computer-stage { position: relative; transform: translateY(-9%); width: min(1450px, 116vw); aspect-ratio: 1; user-select: none; }
+.ux-computer-frame { display: block; width: 100%; height: auto; pointer-events: none; }
+.ux-screen { position: absolute; left: 25.1%; top: 11.05%; width: 50.9%; height: 42.55%; overflow: hidden; border-radius: 1.2% 1.2% 1.8% 1.8%; box-shadow: inset 0 0 0 2px rgba(34, 22, 29, .34), inset 0 0 20px rgba(47, 20, 32, .45); cursor: none !important; }
+.ux-screen, .ux-screen * { cursor: none !important; }
+.ux-pink-desktop { display: none; }
+.ux-layer { position: absolute; inset: 0; }
+.ux-message-notification { animation: ux-window-arrival .68s cubic-bezier(.2,.85,.3,1) both; }
+.ux-message-notification img, .ux-loading-window img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.ux-message-notification img { transform: none; }
+.ux-hotspot { position: absolute; left: 37%; top: 65%; width: 28%; height: 12%; border: 0; background: transparent; cursor: none; }
+.ux-hotspot:focus-visible, .ux-pixel-button:focus-visible, .ux-desktop-icon:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.ux-welcome-window { animation: ux-window-arrival .42s cubic-bezier(.2,.85,.3,1) both; background: transparent; padding: 0; }
+.ux-welcome-window > img { display: block; height: 100%; object-fit: contain; width: 100%; }
+.ux-welcome-window .ux-start-loading { background: transparent; border: 0; box-shadow: none; height: 11%; left: 35%; padding: 0; position: absolute; top: 63%; width: 28%; }
+.ux-welcome-window .ux-start-loading:hover, .ux-welcome-window .ux-start-loading:focus-visible { background: transparent; box-shadow: none; transform: none; }
+.ux-welcome-copy { display: grid; grid-template-columns: 33% 1fr; align-items: center; gap: 5%; width: 100%; }
+.ux-welcome-copy img { animation: ux-assistant-float 2.6s ease-in-out infinite; width: 100%; image-rendering: pixelated; }
+.ux-welcome-copy p { font-family: monospace !important; font-size: clamp(7px, 1.15vw, 17px); line-height: 1.35; margin: 0 0 7%; }
+.ux-window-label { font-weight: 900; font-size: clamp(9px, 1.5vw, 21px) !important; }
+.ux-pixel-button { background: #f397b5; border: 2px solid #171217; box-shadow: 3px 3px 0 #171217; color: #fff; cursor: none; font-family: monospace; font-size: clamp(7px, 1vw, 15px); font-weight: 900; padding: 7% 10%; transition: transform .16s steps(2, end), box-shadow .16s steps(2, end); }
+.ux-pixel-button:hover, .ux-pixel-button:focus-visible { box-shadow: 1px 1px 0 #171217; transform: translate(2px, 2px); }
+.ux-loading-window { animation: ux-fade-in .25s linear both; background: transparent; display: grid; overflow: hidden; place-items: center; }
+.ux-loading-window img { animation: none; height: 72%; max-width: 86%; object-fit: contain; transform: scale(1.025); width: auto; }
+.ux-desktop-icons { animation: ux-desktop-boot .3s linear both; display: block; }
+.ux-desktop-icon { align-items: center; background: transparent; border: 0; color: #4b1635; cursor: none; display: flex; flex-direction: column; font-family: monospace; font-size: clamp(4px, .48vw, 8px); font-weight: 900; gap: 2px; line-height: 1.05; padding: 0; position: absolute; text-align: center; text-decoration: none !important; width: 15%; }
+.ux-desktop-icon img { height: auto; image-rendering: pixelated; max-height: 34%; max-width: 58%; object-fit: contain; transition: transform .18s steps(2, end), filter .18s steps(2, end); }
+.ux-desktop-icon span, .ux-desktop-icon:hover span, .ux-desktop-icon:focus-visible span { text-decoration: none !important; }
+.ux-desktop-icon:hover img, .ux-desktop-icon:focus-visible img { animation: ux-icon-hover-bounce .42s steps(3, end) both; }
+.ux-desktop-icon:nth-child(1) { animation: ux-icon-arrival .35s .05s both; }.ux-desktop-icon:nth-child(2) { animation: ux-icon-arrival .35s .12s both; }.ux-desktop-icon:nth-child(3) { animation: ux-icon-arrival .35s .19s both; }.ux-desktop-icon:nth-child(4) { animation: ux-icon-arrival .35s .26s both; }.ux-desktop-icon:nth-child(5) { animation: ux-icon-arrival .35s .33s both; }.ux-desktop-icon:nth-child(6) { animation: ux-icon-arrival .35s .40s both; }.ux-desktop-icon:nth-child(7) { animation: ux-icon-arrival .35s .47s both; }
+.ux-projects { left: 4%; top: 2%; }.ux-ux-design { left: 4%; top: 15%; }.ux-writing { left: 4%; top: 28%; }.ux-presentations { left: 4%; top: 41%; }.ux-resume { left: 4%; top: 54%; }.ux-home { left: 4%; top: 67%; }.ux-contact { left: 4%; top: 80%; }.ux-contact img { max-width: 88%; }
+#ux-pixel-cursor { display: none; image-rendering: pixelated; left: 0; pointer-events: none; position: absolute; top: 0; transform: translate(-3%, -3%); width: 4%; z-index: 10; }.ux-screen:hover #ux-pixel-cursor.is-visible { display: block; }#ux-pixel-cursor.is-hand { width: 5%; transform: translate(-8%, -8%); }
+@keyframes ux-window-arrival { from { opacity: 0; transform: scale(.82) translateY(8%); } to { opacity: 1; transform: scale(1) translateY(0); } }
+@keyframes ux-assistant-float { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-5%) rotate(2deg); } }
+@keyframes ux-fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ux-loading-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .72; } }
+@keyframes ux-desktop-boot { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ux-icon-arrival { from { opacity: 0; transform: translateY(18%); } to { opacity: 1; transform: translateY(0); } }
+@keyframes ux-icon-hover-bounce { 0% { transform: translateY(0); } 45% { transform: translateY(-8%); } 70% { transform: translateY(-3%); } 100% { transform: translateY(0); } }
+@media (max-width: 700px) { .ux-dashboard-page { padding: 6px; }.ux-computer-stage { width: 100vw; }.ux-screen { border-radius: 4%; }.ux-welcome-copy { grid-template-columns: 30% 1fr; }.ux-desktop-icon { font-size: 6px; } }
+@media (prefers-reduced-motion: reduce) { .ux-message-notification, .ux-welcome-window, .ux-welcome-copy img, .ux-loading-window, .ux-loading-window img, .ux-desktop-icons, .ux-desktop-icon { animation: none !important; }.ux-pixel-button, .ux-desktop-icon img { transition: none; } }
 
 .footer,
 .nav-footer {

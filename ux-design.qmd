@@ -12,8 +12,133 @@ format:
   #title-block-header { display: none !important; }
 </style>
 
-<section class="ux-maintenance" aria-labelledby="ux-maintenance-title">
-  <p>UX &amp; PRODUCT DESIGN</p>
-  <h1 id="ux-maintenance-title">Coming soon!</h1>
-  <p>I’m building something interactive. Please check back soon.</p>
+```{=html}
+<link rel="stylesheet" href="custom.css?ux-dashboard=20260828c" />
+```
+
+```{=html}
+<section class="ux-dashboard-page" aria-labelledby="ux-dashboard-title">
+  <h1 id="ux-dashboard-title" class="visually-hidden">Veronica Pletsch’s interactive UX dashboard</h1>
+  <p id="ux-dashboard-status" class="visually-hidden" aria-live="polite">New message available.</p>
+
+  <div class="ux-computer-stage" data-state="message">
+    <img class="ux-computer-frame" src="images/ux-dashboard/computersemi_final.png" alt="Pink retro desktop computer">
+    <div class="ux-screen" aria-label="Interactive retro desktop">
+      <div class="ux-pink-desktop" aria-hidden="true"></div>
+
+      <div class="ux-layer ux-message-notification">
+        <img src="images/ux-dashboard/new_message.png" alt="New message: you have one new message">
+        <button class="ux-hotspot ux-open-message" type="button" aria-label="Open new message"></button>
+      </div>
+
+      <div class="ux-layer ux-welcome-window" hidden>
+        <img src="images/ux-dashboard/clippy_message.png" alt="Welcome to my web portfolio. Click through the computer folders to explore my work.">
+        <button class="ux-pixel-button ux-start-loading" type="button" aria-label="OK, continue to the desktop"></button>
+      </div>
+
+      <div class="ux-layer ux-loading-window" hidden aria-hidden="true">
+        <img src="images/ux-dashboard/loading_page.gif?animated=1" alt="Loading dashboard">
+      </div>
+
+      <div class="ux-layer ux-desktop-icons" hidden>
+        <a class="ux-desktop-icon ux-projects" href="projects.html">
+          <img src="images/ux-dashboard/blue_folder.png" alt="">
+          <span>Projects</span>
+        </a>
+        <a class="ux-desktop-icon ux-ux-design" href="ux-design.html">
+          <img src="images/ux-dashboard/paint_icon.png" alt="">
+          <span>UX &amp; Product Design</span>
+        </a>
+        <a class="ux-desktop-icon ux-writing" href="writingsamplese.html">
+          <img src="images/ux-dashboard/cd_icon.png" alt="">
+          <span>Writing Samples</span>
+        </a>
+        <a class="ux-desktop-icon ux-presentations" href="presentations.html">
+          <img src="images/ux-dashboard/blue_folder2.png" alt="">
+          <span>Presentations</span>
+        </a>
+        <a class="ux-desktop-icon ux-resume" href="experience.html">
+          <img src="images/ux-dashboard/coral_folder.png" alt="">
+          <span>Resume</span>
+        </a>
+        <a class="ux-desktop-icon ux-home" href="index.html">
+          <img src="images/ux-dashboard/internet_icon.png" alt="">
+          <span>Home</span>
+        </a>
+        <a class="ux-desktop-icon ux-contact" href="contact.html">
+          <img src="images/ux-dashboard/gear_icon.png" alt="">
+          <span>Contact</span>
+        </a>
+      </div>
+
+      <img id="ux-pixel-cursor" src="images/ux-dashboard/arrow_cursor.png" data-arrow="images/ux-dashboard/arrow_cursor.png" data-hand="images/ux-dashboard/hand_cursor.png" alt="" aria-hidden="true">
+    </div>
+  </div>
 </section>
+
+<script>
+  (function () {
+    const stage = document.querySelector('.ux-computer-stage');
+    if (!stage) return;
+    const screen = stage.querySelector('.ux-screen');
+    const message = stage.querySelector('.ux-message-notification');
+    const welcome = stage.querySelector('.ux-welcome-window');
+    const loading = stage.querySelector('.ux-loading-window');
+    const desktop = stage.querySelector('.ux-desktop-icons');
+    const cursor = stage.querySelector('#ux-pixel-cursor');
+    const status = document.querySelector('#ux-dashboard-status');
+    const introStorageKey = 'veronicaPletschUxDesktopIntroSeen';
+
+    function hasCompletedIntro() {
+      try {
+        return window.localStorage.getItem(introStorageKey) === 'true';
+      } catch (error) {
+        return false;
+      }
+    }
+
+    function rememberCompletedIntro() {
+      try {
+        window.localStorage.setItem(introStorageKey, 'true');
+      } catch (error) {
+        // The dashboard still works when a browser blocks local storage.
+      }
+    }
+
+    function setState(next) {
+      stage.dataset.state = next;
+      message.hidden = next !== 'message';
+      welcome.hidden = next !== 'welcome';
+      loading.hidden = next !== 'loading';
+      loading.setAttribute('aria-hidden', next === 'loading' ? 'false' : 'true');
+      desktop.hidden = next !== 'desktop';
+      status.textContent = next === 'message' ? 'New message available.' : next === 'welcome' ? 'Welcome message open.' : next === 'loading' ? 'Loading dashboard.' : 'Desktop files are ready.';
+    }
+
+    setState(hasCompletedIntro() ? 'desktop' : 'message');
+
+    stage.querySelector('.ux-open-message').addEventListener('click', function () { setState('welcome'); });
+    stage.querySelector('.ux-start-loading').addEventListener('click', function () {
+      setState('loading');
+      window.setTimeout(function () {
+        rememberCompletedIntro();
+        setState('desktop');
+      }, 3400);
+    });
+    screen.addEventListener('pointermove', function (event) {
+      if (event.pointerType === 'touch') return;
+      const bounds = screen.getBoundingClientRect();
+      cursor.style.left = ((event.clientX - bounds.left) / bounds.width * 100) + '%';
+      cursor.style.top = ((event.clientY - bounds.top) / bounds.height * 100) + '%';
+      const isAction = event.target.closest('button, a');
+      cursor.src = isAction ? cursor.dataset.hand : cursor.dataset.arrow;
+      cursor.classList.toggle('is-hand', Boolean(isAction));
+      cursor.classList.add('is-visible');
+    });
+    screen.addEventListener('pointerleave', function () {
+      cursor.classList.remove('is-visible', 'is-hand');
+      cursor.src = cursor.dataset.arrow;
+    });
+  }());
+</script>
+```
