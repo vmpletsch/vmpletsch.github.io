@@ -137,7 +137,7 @@ format:
     <a class="alt-icon alt-writing" href="writingsamplese.html" data-window-title="Writing Samples"><img src="images/ux-dashboard/cd_icon.png" alt=""><span>Writing Samples</span></a>
     <a class="alt-icon alt-presentations" href="presentations.html" data-window-title="Presentations"><img src="images/ux-dashboard/blue_folder2.png" alt=""><span>Presentations</span></a>
     <a class="alt-icon alt-resume" href="experience.html" data-window-title="Resume &amp; Experience"><img src="images/ux-dashboard/coral_folder.png" alt=""><span>Resume</span></a>
-    <a class="alt-icon alt-home" href="index.html" data-window-title="About Me"><img src="images/ux-dashboard/internet_icon.png" alt=""><span>About Me</span></a>
+    <a class="alt-icon alt-home" href="about-me.html" data-window-title="About Me"><img src="images/ux-dashboard/internet_icon.png" alt=""><span>About Me</span></a>
     <a class="alt-icon alt-contact" href="contact.html" data-window-title="Contact"><img src="images/ux-dashboard/gear_icon.png" alt=""><span>Contact</span></a>
   </div>
 
