@@ -142,6 +142,7 @@ format:
     <a class="alt-icon alt-resume" href="experience.html" data-window-title="Resume &amp; Experience"><img src="images/ux-dashboard/coral_folder.png" alt=""><span>Resume</span></a>
     <a class="alt-icon alt-home" href="about-me.html" data-window-title="About Me"><img src="images/ux-dashboard/internet_icon.png" alt=""><span>About Me</span></a>
     <a class="alt-icon alt-contact" href="contact.html" data-window-title="Contact"><img src="images/ux-dashboard/gear_icon.png" alt=""><span>Contact</span></a>
+    <a class="alt-icon alt-sabrina" href="about-me.html" data-window-title="About Me"><img src="images/ux-dashboard/sabrina.png" alt=""><span>Sabrina</span></a>
   </div>
 
   <div class="alt-window-layer" hidden aria-live="polite"></div>
