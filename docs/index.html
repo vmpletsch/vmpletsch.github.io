@@ -298,9 +298,10 @@ ul.task-list li input[type="checkbox"] {
   .alt-hourglass::after { border-bottom: 11px solid #7deeff; bottom: 2px; }
   .alt-hourglass { animation: alt-hourglass-turn 1.15s steps(2, end) infinite; }
   .alt-message, .alt-welcome, .alt-loading { align-items: center; display: grid; justify-items: center; z-index: 3; }
-  .alt-message img { height: min(52vh, 520px); object-fit: contain; width: min(54vw, 560px); }
+  .alt-message-art { height: min(52vh, 54vw, 520px); position: relative; width: min(52vh, 54vw, 520px); }
+  .alt-message img { display: block; height: 100%; object-fit: contain; width: 100%; }
   .alt-welcome img { height: min(68vh, 700px); object-fit: contain; width: min(72vw, 700px); }
-  .alt-hotspot { background: transparent; border: 0; height: 11%; left: 39%; position: absolute; top: 64%; width: 23%; }
+  .alt-message .alt-hotspot { background: transparent; border: 0; height: 15%; left: 36%; position: absolute; top: 63%; width: 28%; }
   .alt-welcome .alt-continue { background: transparent; border: 0; height: 11%; left: 35%; padding: 0; position: absolute; top: 63%; width: 28%; }
   .alt-loading img { height: min(42vh, 420px); max-width: 58vw; object-fit: contain; transform: scale(1.025); width: auto; }
   .alt-message, .alt-welcome, .alt-loading { animation: alt-arrive .68s cubic-bezier(.22, .61, .36, 1) both; }
@@ -369,8 +370,10 @@ ul.task-list li input[type="checkbox"] {
   <div class="alt-window-layer" hidden="" aria-live="polite"></div>
 
   <div class="alt-layer alt-message">
-    <img src="images/ux-dashboard/new_message.png" alt="New message: you have one new message">
-    <button class="alt-hotspot" type="button" aria-label="Open new message"></button>
+    <div class="alt-message-art">
+      <img src="images/ux-dashboard/new_message.png" alt="New message: you have one new message">
+      <button class="alt-hotspot" type="button" aria-label="Open new message"></button>
+    </div>
   </div>
 
   <div class="alt-layer alt-welcome" hidden="">
