@@ -267,16 +267,17 @@ ul.task-list li input[type="checkbox"] {
   .alt-diagnostic-list .alt-diagnostic-rule { border-top: 3px solid #efefef; margin: 13px 0 7px; max-width: 1100px; }
   .alt-diagnostic-device { display: grid; grid-template-columns: 6ch 8ch 9ch 1fr; }
   .alt-desktop-icons, .alt-layer { inset: 0; position: absolute; }
-  .alt-desktop-icons { align-content: start; display: grid; gap: 16px 24px; grid-template-columns: repeat(2, clamp(50px, 6vw, 78px)); grid-template-rows: repeat(4, 70px); inset: auto; left: 3vw; position: absolute; top: 4vh; z-index: 1; }
-  .alt-icon { align-items: center; color: #fff4ff; display: flex; flex-direction: column; font-family: monospace; font-size: clamp(6px, .65vw, 10px); font-weight: 900; gap: 3px; left: 3vw; line-height: 1.05; position: absolute; text-align: center; text-decoration: none !important; text-shadow: 1px 1px 0 #14043f, 0 0 6px rgba(100,246,255,.72); width: clamp(50px, 6vw, 78px); }
-  .alt-icon img { image-rendering: pixelated; max-height: 40px; max-width: 46px; object-fit: contain; }
+  .alt-desktop-icons { align-content: start; display: grid; gap: 20px 28px; grid-template-columns: repeat(2, clamp(68px, 7.8vw, 100px)); grid-template-rows: repeat(4, 86px); inset: auto; left: 3vw; position: absolute; top: 4vh; z-index: 1; }
+  .alt-icon { align-items: center; color: #fff4ff; display: flex; flex-direction: column; font-family: monospace; font-size: clamp(8px, .78vw, 13px); font-weight: 900; gap: 4px; left: 3vw; line-height: 1.08; position: absolute; text-align: center; text-decoration: none !important; text-shadow: 1px 1px 0 #14043f, 0 0 6px rgba(100,246,255,.72); width: clamp(68px, 7.8vw, 100px); }
+  .alt-icon img { image-rendering: pixelated; max-height: 52px; max-width: 60px; object-fit: contain; }
   .alt-icon span { text-decoration: none !important; }
   .alt-icon:hover img, .alt-icon:focus-visible img { animation: alt-bounce .42s steps(3, end) both; }
   .alt-icon { left: auto !important; position: relative; top: auto !important; }
-  .alt-contact img { max-width: 58px; }
+  .alt-contact img { max-width: 70px; }
   .alt-window-layer { bottom: 46px; left: 0; pointer-events: none; position: absolute; right: 0; top: 0; z-index: 2; }
   .alt-portfolio-window { background: #d6d2ca; border: 2px solid #20151e; box-shadow: 4px 4px 0 rgba(30, 21, 29, .48), inset 1px 1px #fff, inset -1px -1px #706b70; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; min-height: min(330px, 58vh); min-width: min(360px, 72vw); overflow: hidden; pointer-events: auto; position: absolute; resize: both; }
   .alt-portfolio-window.is-active { box-shadow: 5px 5px 0 rgba(30, 21, 29, .56), inset 1px 1px #fff, inset -1px -1px #706b70; }
+  .alt-portfolio-window.is-about-window .alt-window-titlebar { font-size: clamp(15px, 1.25vw, 20px); min-height: 36px; }
   .alt-window-titlebar { align-items: center; background: linear-gradient(90deg, #a84b85, #6d3f72); color: #fff; cursor: move; display: flex; font-family: monospace; font-size: clamp(9px, .9vw, 13px); font-weight: 900; gap: 7px; justify-content: space-between; min-height: 28px; padding: 3px 4px 3px 8px; user-select: none; }
   .alt-window-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .alt-window-controls { display: flex; flex: 0 0 auto; gap: 3px; }
@@ -291,8 +292,9 @@ ul.task-list li input[type="checkbox"] {
   .alt-start img { transition: filter 70ms linear, transform 70ms steps(1, end); }
   .alt-start:active img, .alt-start.is-pressed img { filter: brightness(.79); transform: translate(2px, 2px); }
   .alt-task-label { flex: 0 0 240px; height: 38px; white-space: nowrap; }
-  .alt-window-tasks { align-items: center; display: flex; gap: 5px; min-width: 0; overflow-x: auto; padding-left: 6px; }
+  .alt-window-tasks { align-items: center; align-self: stretch; display: flex; gap: 5px; min-width: 0; overflow-x: auto; padding-left: 6px; }
   .alt-window-task { background: #c9c5bf; border: 2px outset #fff; color: #2d2330; cursor: none; font-family: monospace; font-size: clamp(8px, .75vw, 11px); font-weight: 900; max-width: min(150px, 22vw); overflow: hidden; padding: 4px 8px; text-overflow: ellipsis; white-space: nowrap; }
+  .alt-window-task.is-about-task { align-self: stretch; box-sizing: border-box; flex: 0 0 120px; font-size: clamp(10px, .9vw, 13px); justify-content: center; max-width: 120px; min-width: 120px; padding: 0 6px; }
   .alt-window-task.is-active { background: #e5c6df; border-style: inset; }
   .alt-desktop-boot-loader { display: grid; inset: 0; place-items: center; pointer-events: none; position: absolute; z-index: 3; }
   .alt-hourglass { display: block; height: 32px; image-rendering: pixelated; width: 32px; }
@@ -312,7 +314,7 @@ ul.task-list li input[type="checkbox"] {
   @keyframes alt-arrive { from { opacity: 0; transform: scale(.84) translateY(7%); } to { opacity: 1; transform: scale(1) translateY(0); } }
   @keyframes alt-bounce { 0% { transform: translateY(0); } 45% { transform: translateY(-8%); } 70% { transform: translateY(-3%); } 100% { transform: translateY(0); } }
   @keyframes alt-desktop-reveal { from { opacity: 0; transform: scale(1.015); } to { opacity: 1; transform: scale(1); } }
-  @media (max-width: 700px) { .alt-icon { left: 2vw; width: 60px; }.alt-icon img { max-height: 36px; max-width: 42px; }.alt-icon { font-size: 6px; }.alt-portfolio-window { min-height: 250px; min-width: 300px; resize: none; }.alt-window-layer { bottom: 40px; }.alt-window-titlebar { min-height: 25px; }.alt-window-control { height: 18px; width: 20px; }.alt-post-screen { font-size: 12px; padding: 14px; }.alt-diagnostic-screen { font-size: 10px; padding: 12px; }.alt-diagnostic-panel { border-width: 4px; padding: 8px 10px 10px; width: 100%; }.alt-diagnostic-section + .alt-diagnostic-section { margin-left: -10px; margin-right: -10px; padding-left: 10px; padding-right: 10px; }.alt-diagnostic-row { grid-template-columns: 44% 1fr; }.alt-diagnostic-list { margin-top: 34px; }.alt-diagnostic-device { grid-template-columns: 4ch 6ch 7ch 1fr; } }
+  @media (max-width: 700px) { .alt-desktop-icons { gap: 16px 20px; grid-template-columns: repeat(2, 72px); grid-template-rows: repeat(4, 78px); left: 2vw; }.alt-icon { font-size: 7px; width: 72px; }.alt-icon img { max-height: 46px; max-width: 54px; }.alt-icon { left: 2vw; }.alt-portfolio-window { min-height: 250px; min-width: 300px; resize: none; }.alt-window-layer { bottom: 40px; }.alt-window-titlebar { min-height: 25px; }.alt-portfolio-window.is-about-window .alt-window-titlebar { font-size: 14px; min-height: 31px; }.alt-window-control { height: 18px; width: 20px; }.alt-post-screen { font-size: 12px; padding: 14px; }.alt-diagnostic-screen { font-size: 10px; padding: 12px; }.alt-diagnostic-panel { border-width: 4px; padding: 8px 10px 10px; width: 100%; }.alt-diagnostic-section + .alt-diagnostic-section { margin-left: -10px; margin-right: -10px; padding-left: 10px; padding-right: 10px; }.alt-diagnostic-row { grid-template-columns: 44% 1fr; }.alt-diagnostic-list { margin-top: 34px; }.alt-diagnostic-device { grid-template-columns: 4ch 6ch 7ch 1fr; } }
 </style>
 
 <section class="alt-home-desktop" aria-label="Experimental desktop portfolio homepage">
@@ -610,6 +612,7 @@ ul.task-list li input[type="checkbox"] {
       nextWindowOffset += 1;
       const portfolioWindow = document.createElement('section');
       portfolioWindow.className = 'alt-portfolio-window';
+      if (title === 'About Me') portfolioWindow.classList.add('is-about-window');
       portfolioWindow.dataset.windowUrl = url;
       portfolioWindow.setAttribute('aria-label', title + ' portfolio window');
       portfolioWindow.setAttribute('tabindex', '-1');
@@ -660,6 +663,7 @@ ul.task-list li input[type="checkbox"] {
       task.type = 'button';
       task.dataset.windowUrl = url;
       task.textContent = title;
+      if (title === 'About Me') task.classList.add('is-about-task');
       task.setAttribute('aria-label', 'Show ' + title + ' window');
       windowLayer.append(portfolioWindow);
       windowTasks.append(task);
@@ -685,7 +689,14 @@ ul.task-list li input[type="checkbox"] {
     desktop.querySelector('.alt-start').addEventListener('click', function (event) {
       const homeButton = event.currentTarget;
       homeButton.classList.add('is-pressed');
-      status.textContent = 'Home button pressed.';
+      const active = Array.from(desktop.querySelectorAll('.alt-portfolio-window.is-active')).pop();
+      if (active) {
+        const activeTitle = openWindows.get(active.dataset.windowUrl).title;
+        minimizeWindow(active.dataset.windowUrl);
+        status.textContent = activeTitle + ' minimized. Dashboard restored.';
+      } else {
+        status.textContent = 'Dashboard restored.';
+      }
       window.setTimeout(function () { homeButton.classList.remove('is-pressed'); }, 240);
     });
     desktop.querySelector('.alt-hotspot').addEventListener('click', function () { setState('welcome'); });

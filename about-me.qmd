@@ -10,13 +10,19 @@ format:
 ---
 
 <style>
-  #title-block-header { display: none !important; }
+  body:has(.about-me-page) #quarto-header,
+  body:has(.about-me-page) #quarto-footer,
+  body:has(.about-me-page) .nav-footer,
+  body:has(.about-me-page) #title-block-header { display: none !important; }
+  body:has(.about-me-page) { padding-top: 0 !important; }
+  body:has(.about-me-page) #quarto-content,
+  body:has(.about-me-page) main.content { margin-top: 0 !important; padding-top: 0 !important; }
 </style>
 <link rel="stylesheet" href="custom.css?v=20260825-7">
 
-::: {style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; max-width: 800px; margin: 0 auto; width: 100%;"}
+::: {.about-me-page style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; max-width: 900px; margin: 0 auto; width: 100%;"}
 
-<h1 class="tracking-in-expand" style="font-size: 100px; margin-bottom: 0px; line-height: 1; font-family: 'DM Serif Display', serif; text-align: center; width: 100%;">About Me</h1>
+<h1 class="tracking-in-expand" style="font-size: clamp(52px, 7vw, 88px); margin-bottom: 0px; line-height: 1; font-family: 'DM Serif Display', serif; text-align: center; width: 100%;">Veronica Pletsch</h1>
 
 <div style="text-align: center; margin-top: 0px; margin-bottom: 50px;">
   <img src="images/veronica-pletsch-profile.jpg" alt="Veronica Pletsch, data scientist and social science researcher" class="hero-portrait">
