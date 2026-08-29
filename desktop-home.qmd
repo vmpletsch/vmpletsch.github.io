@@ -60,9 +60,12 @@ format:
   .alt-window-content { background: #fff; border: 2px inset #fff; min-height: 0; overflow: hidden; }
   .alt-window-content iframe { background: #fff; border: 0; display: block; height: 100%; width: 100%; }
   .alt-window-status { background: #d6d2ca; border-top: 1px solid #f8f8f0; color: #4a3448; font-family: monospace; font-size: clamp(7px, .7vw, 10px); font-weight: 700; overflow: hidden; padding: 3px 6px; text-overflow: ellipsis; white-space: nowrap; }
-  .alt-taskbar { align-items: center; background: #d6d2ca; border-top: 3px solid #f8f8f0; bottom: 0; box-shadow: inset 0 2px #fff; display: flex; font-family: monospace; font-size: clamp(10px, 1.1vw, 15px); font-weight: 900; height: 38px; left: 0; padding: 0 8px; position: absolute; right: 0; z-index: 4; }
-  .alt-start { background: #d8b8df; border: 2px outset #fff; margin-right: 10px; padding: 4px 10px; }
-  .alt-task-label { border: 2px inset #fff; padding: 4px 10px; white-space: nowrap; }
+  .alt-taskbar { align-items: center; background: #d6cbd9 url("images/ux-dashboard/footer.png") left bottom / auto 38px repeat-x; bottom: 0; box-sizing: border-box; display: flex; height: 38px; left: 0; overflow: hidden; padding: 0; position: absolute; right: 0; z-index: 4; }
+  .alt-start { appearance: none; background: transparent; border: 0; cursor: none; flex: 0 0 120px; height: 38px; margin: 0; padding: 0; position: relative; width: 120px; }
+  .alt-start img, .alt-task-label img { display: block; height: 38px; image-rendering: pixelated; width: auto; }
+  .alt-start img { transition: filter 70ms linear, transform 70ms steps(1, end); }
+  .alt-start:active img, .alt-start.is-pressed img { filter: brightness(.79); transform: translate(2px, 2px); }
+  .alt-task-label { flex: 0 0 240px; height: 38px; white-space: nowrap; }
   .alt-window-tasks { align-items: center; display: flex; gap: 5px; min-width: 0; overflow-x: auto; padding-left: 6px; }
   .alt-window-task { background: #c9c5bf; border: 2px outset #fff; color: #2d2330; cursor: none; font-family: monospace; font-size: clamp(8px, .75vw, 11px); font-weight: 900; max-width: min(150px, 22vw); overflow: hidden; padding: 4px 8px; text-overflow: ellipsis; white-space: nowrap; }
   .alt-window-task.is-active { background: #e5c6df; border-style: inset; }
@@ -84,7 +87,7 @@ format:
   @keyframes alt-arrive { from { opacity: 0; transform: scale(.84) translateY(7%); } to { opacity: 1; transform: scale(1) translateY(0); } }
   @keyframes alt-bounce { 0% { transform: translateY(0); } 45% { transform: translateY(-8%); } 70% { transform: translateY(-3%); } 100% { transform: translateY(0); } }
   @keyframes alt-desktop-reveal { from { opacity: 0; transform: scale(1.015); } to { opacity: 1; transform: scale(1); } }
-  @media (max-width: 700px) { .alt-icon { left: 2vw; width: 60px; }.alt-icon img { max-height: 36px; max-width: 42px; }.alt-icon { font-size: 6px; }.alt-portfolio-window { min-height: 250px; min-width: 300px; resize: none; }.alt-window-layer { bottom: 40px; }.alt-taskbar { height: 32px; }.alt-window-titlebar { min-height: 25px; }.alt-window-control { height: 18px; width: 20px; }.alt-post-screen { font-size: 12px; padding: 14px; }.alt-diagnostic-screen { font-size: 10px; padding: 12px; }.alt-diagnostic-panel { border-width: 4px; padding: 8px 10px 10px; width: 100%; }.alt-diagnostic-section + .alt-diagnostic-section { margin-left: -10px; margin-right: -10px; padding-left: 10px; padding-right: 10px; }.alt-diagnostic-row { grid-template-columns: 44% 1fr; }.alt-diagnostic-list { margin-top: 34px; }.alt-diagnostic-device { grid-template-columns: 4ch 6ch 7ch 1fr; } }
+  @media (max-width: 700px) { .alt-icon { left: 2vw; width: 60px; }.alt-icon img { max-height: 36px; max-width: 42px; }.alt-icon { font-size: 6px; }.alt-portfolio-window { min-height: 250px; min-width: 300px; resize: none; }.alt-window-layer { bottom: 40px; }.alt-window-titlebar { min-height: 25px; }.alt-window-control { height: 18px; width: 20px; }.alt-post-screen { font-size: 12px; padding: 14px; }.alt-diagnostic-screen { font-size: 10px; padding: 12px; }.alt-diagnostic-panel { border-width: 4px; padding: 8px 10px 10px; width: 100%; }.alt-diagnostic-section + .alt-diagnostic-section { margin-left: -10px; margin-right: -10px; padding-left: 10px; padding-right: 10px; }.alt-diagnostic-row { grid-template-columns: 44% 1fr; }.alt-diagnostic-list { margin-top: 34px; }.alt-diagnostic-device { grid-template-columns: 4ch 6ch 7ch 1fr; } }
 </style>
 
 <section class="alt-home-desktop" aria-label="Experimental desktop portfolio homepage">
@@ -156,7 +159,7 @@ format:
   </div>
 
   <div class="alt-desktop-boot-loader" hidden role="status" aria-label="Loading desktop"><img class="alt-hourglass" src="images/ux-dashboard/hourglass.gif" alt="" aria-hidden="true"></div>
-  <div class="alt-taskbar" hidden><span class="alt-start" aria-hidden="true">Home</span><span class="alt-task-label">Veronica's Portfolio</span><div class="alt-window-tasks" aria-label="Open portfolio windows"></div></div>
+  <div class="alt-taskbar" hidden><button class="alt-start" type="button" aria-label="Home"><img src="images/ux-dashboard/homebutton.png" alt=""></button><span class="alt-task-label"><img src="images/ux-dashboard/veronicafooter.png" alt="Veronica Pletsch"></span><div class="alt-window-tasks" aria-label="Open portfolio windows"></div></div>
   <img id="alt-pixel-cursor" src="images/ux-dashboard/pink_arrowcursor.png" data-arrow="images/ux-dashboard/pink_arrowcursor.png" data-hand="images/ux-dashboard/hand_cursor.png" alt="" aria-hidden="true">
 </section>
 
@@ -454,6 +457,12 @@ format:
 
     setState('boot');
     powerOn.addEventListener('click', startBoot);
+    desktop.querySelector('.alt-start').addEventListener('click', function (event) {
+      const homeButton = event.currentTarget;
+      homeButton.classList.add('is-pressed');
+      status.textContent = 'Home button pressed.';
+      window.setTimeout(function () { homeButton.classList.remove('is-pressed'); }, 240);
+    });
     desktop.querySelector('.alt-hotspot').addEventListener('click', function () { setState('welcome'); });
     desktop.querySelector('.alt-continue').addEventListener('click', function () {
       setState('loading');
