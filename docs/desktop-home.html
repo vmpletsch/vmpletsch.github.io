@@ -292,11 +292,7 @@ ul.task-list li input[type="checkbox"] {
   .alt-window-task { background: #c9c5bf; border: 2px outset #fff; color: #2d2330; cursor: none; font-family: monospace; font-size: clamp(8px, .75vw, 11px); font-weight: 900; max-width: min(150px, 22vw); overflow: hidden; padding: 4px 8px; text-overflow: ellipsis; white-space: nowrap; }
   .alt-window-task.is-active { background: #e5c6df; border-style: inset; }
   .alt-desktop-boot-loader { display: grid; inset: 0; place-items: center; pointer-events: none; position: absolute; z-index: 3; }
-  .alt-hourglass { border-left: 2px solid #f1e8d0; border-right: 2px solid #f1e8d0; display: block; filter: drop-shadow(1px 1px 0 #36265b); height: 27px; position: relative; transform-origin: center; width: 20px; }
-  .alt-hourglass::before, .alt-hourglass::after { border-left: 8px solid transparent; border-right: 8px solid transparent; content: ""; left: 0; position: absolute; }
-  .alt-hourglass::before { border-top: 11px solid #f57ec7; top: 2px; }
-  .alt-hourglass::after { border-bottom: 11px solid #7deeff; bottom: 2px; }
-  .alt-hourglass { animation: alt-hourglass-turn 1.15s steps(2, end) infinite; }
+  .alt-hourglass { display: block; height: 32px; image-rendering: pixelated; width: 32px; }
   .alt-message, .alt-welcome, .alt-loading { align-items: center; display: grid; justify-items: center; z-index: 3; }
   .alt-message-art { height: min(52vh, 54vw, 520px); position: relative; width: min(52vh, 54vw, 520px); }
   .alt-message img { display: block; height: 100%; object-fit: contain; width: 100%; }
@@ -313,7 +309,6 @@ ul.task-list li input[type="checkbox"] {
   @keyframes alt-arrive { from { opacity: 0; transform: scale(.84) translateY(7%); } to { opacity: 1; transform: scale(1) translateY(0); } }
   @keyframes alt-bounce { 0% { transform: translateY(0); } 45% { transform: translateY(-8%); } 70% { transform: translateY(-3%); } 100% { transform: translateY(0); } }
   @keyframes alt-desktop-reveal { from { opacity: 0; transform: scale(1.015); } to { opacity: 1; transform: scale(1); } }
-  @keyframes alt-hourglass-turn { 0%, 48% { transform: rotate(0deg); } 52%, 100% { transform: rotate(180deg); } }
   @media (max-width: 700px) { .alt-icon { left: 2vw; width: 60px; }.alt-icon img { max-height: 36px; max-width: 42px; }.alt-icon { font-size: 6px; }.alt-portfolio-window { min-height: 250px; min-width: 300px; resize: none; }.alt-window-layer { bottom: 40px; }.alt-taskbar { height: 32px; }.alt-window-titlebar { min-height: 25px; }.alt-window-control { height: 18px; width: 20px; }.alt-post-screen { font-size: 12px; padding: 14px; }.alt-diagnostic-screen { font-size: 10px; padding: 12px; }.alt-diagnostic-panel { border-width: 4px; padding: 8px 10px 10px; width: 100%; }.alt-diagnostic-section + .alt-diagnostic-section { margin-left: -10px; margin-right: -10px; padding-left: 10px; padding-right: 10px; }.alt-diagnostic-row { grid-template-columns: 44% 1fr; }.alt-diagnostic-list { margin-top: 34px; }.alt-diagnostic-device { grid-template-columns: 4ch 6ch 7ch 1fr; } }
 </style>
 
@@ -385,7 +380,7 @@ ul.task-list li input[type="checkbox"] {
     <img src="images/ux-dashboard/loading_page.gif?animated=1" alt="Loading desktop">
   </div>
 
-  <div class="alt-desktop-boot-loader" hidden="" role="status" aria-label="Loading desktop"><span class="alt-hourglass" aria-hidden="true"></span></div>
+  <div class="alt-desktop-boot-loader" hidden="" role="status" aria-label="Loading desktop"><img class="alt-hourglass" src="images/ux-dashboard/hourglass.gif" alt="" aria-hidden="true"></div>
   <div class="alt-taskbar" hidden=""><span class="alt-start" aria-hidden="true">Home</span><span class="alt-task-label">Veronica's Portfolio</span><div class="alt-window-tasks" aria-label="Open portfolio windows"></div></div>
   <img id="alt-pixel-cursor" src="images/ux-dashboard/pink_arrowcursor.png" data-arrow="images/ux-dashboard/pink_arrowcursor.png" data-hand="images/ux-dashboard/hand_cursor.png" alt="" aria-hidden="true">
 </section>
