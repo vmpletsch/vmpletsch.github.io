@@ -81,7 +81,7 @@ format:
   .alt-loading img { height: min(42vh, 420px); max-width: 58vw; object-fit: contain; transform: scale(1.025); width: auto; }
   .alt-message, .alt-welcome, .alt-loading { animation: alt-arrive .68s cubic-bezier(.22, .61, .36, 1) both; }
   .alt-desktop-icons { animation: alt-desktop-reveal .65s ease-out both; }
-  #alt-pixel-cursor { display: none; image-rendering: pixelated; left: 0; pointer-events: none; position: absolute; top: 0; transform: translate(-3%, -3%); width: clamp(12px, 1.25vw, 20px); z-index: 10; }
+  #alt-pixel-cursor { display: none; image-rendering: pixelated; left: 0; pointer-events: none; position: absolute; top: 0; transform: translate(-3%, -3%); width: clamp(15px, 1.55vw, 24px); z-index: 10; }
   .alt-home-desktop:hover #alt-pixel-cursor.is-visible { display: block; }
   #alt-pixel-cursor.is-hand { transform: translate(-8%, -8%); width: clamp(15px, 1.55vw, 24px); }
   .alt-home-desktop:not(.is-ready) #alt-pixel-cursor { display: none !important; }
