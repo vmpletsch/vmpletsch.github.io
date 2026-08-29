@@ -497,6 +497,7 @@ format:
       task.textContent = title;
       const taskArtworkByTitle = {
         'About Me': { closed: 'images/ux-dashboard/aboutme_closed.png', open: 'images/ux-dashboard/aboutme_open.png' },
+        'Contact': { closed: 'images/ux-dashboard/contactme_closed.png', open: 'images/ux-dashboard/contactme_open.png' },
         'Presentations': { closed: 'images/ux-dashboard/presentation_closed.png', open: 'images/ux-dashboard/presentation_open.png' },
         'Projects': { closed: 'images/ux-dashboard/projects_closed.png', open: 'images/ux-dashboard/projects_open.png' },
         'Resume & Experience': { closed: 'images/ux-dashboard/resume_closed.png', open: 'images/ux-dashboard/resume_open.png' },
