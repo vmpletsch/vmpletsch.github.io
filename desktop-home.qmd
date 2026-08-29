@@ -70,8 +70,8 @@ format:
   .alt-task-label { flex: 0 0 240px; height: 38px; white-space: nowrap; }
   .alt-window-tasks { align-items: center; align-self: stretch; display: flex; gap: 5px; min-width: 0; overflow-x: auto; padding-left: 6px; }
   .alt-window-task { background: #c9c5bf; border: 2px outset #fff; color: #2d2330; cursor: none; font-family: monospace; font-size: clamp(8px, .75vw, 11px); font-weight: 900; max-width: min(150px, 22vw); overflow: hidden; padding: 4px 8px; text-overflow: ellipsis; white-space: nowrap; }
-  .alt-window-task.is-about-task, .alt-window-task.is-about-task.is-active { align-self: stretch; background: transparent; border: 0; box-sizing: border-box; flex: 0 0 120px; max-width: 120px; min-width: 120px; padding: 0; }
-  .alt-window-task.is-about-task img { display: block; height: 38px; image-rendering: pixelated; width: 120px; }
+  .alt-window-task.is-about-task, .alt-window-task.is-about-task.is-active, .alt-window-task.is-projects-task, .alt-window-task.is-projects-task.is-active { align-self: stretch; background: transparent; border: 0; box-sizing: border-box; flex: 0 0 120px; max-width: 120px; min-width: 120px; padding: 0; }
+  .alt-window-task.is-about-task img, .alt-window-task.is-projects-task img { display: block; height: 38px; image-rendering: pixelated; width: 120px; }
   .alt-window-task.is-active { background: #e5c6df; border-style: inset; }
   .alt-desktop-boot-loader { display: grid; inset: 0; place-items: center; pointer-events: none; position: absolute; z-index: 3; }
   .alt-hourglass { display: block; height: 32px; image-rendering: pixelated; width: 32px; }
@@ -364,7 +364,7 @@ format:
     }
 
     function updateWindowTaskArtwork(entry, isOpen) {
-      if (!entry || !entry.task.classList.contains('is-about-task')) return;
+      if (!entry || !entry.task.dataset.openArtwork || !entry.task.dataset.closedArtwork) return;
       const artwork = entry.task.querySelector('img');
       if (artwork) artwork.src = isOpen ? entry.task.dataset.openArtwork : entry.task.dataset.closedArtwork;
     }
@@ -495,15 +495,20 @@ format:
       task.type = 'button';
       task.dataset.windowUrl = url;
       task.textContent = title;
-      if (title === 'About Me') {
-        task.classList.add('is-about-task');
-        task.dataset.openArtwork = 'images/ux-dashboard/aboutme_open.png';
-        task.dataset.closedArtwork = 'images/ux-dashboard/aboutme_closed.png';
+      const taskArtwork = title === 'About Me'
+        ? { closed: 'images/ux-dashboard/aboutme_closed.png', cssClass: 'is-about-task', open: 'images/ux-dashboard/aboutme_open.png' }
+        : title === 'Projects'
+          ? { closed: 'images/ux-dashboard/projects_closed.png', cssClass: 'is-projects-task', open: 'images/ux-dashboard/projects_open.png' }
+          : null;
+      if (taskArtwork) {
+        task.classList.add(taskArtwork.cssClass);
+        task.dataset.openArtwork = taskArtwork.open;
+        task.dataset.closedArtwork = taskArtwork.closed;
         task.textContent = '';
-        const taskArtwork = document.createElement('img');
-        taskArtwork.src = task.dataset.openArtwork;
-        taskArtwork.alt = '';
-        task.append(taskArtwork);
+        const taskArtworkImage = document.createElement('img');
+        taskArtworkImage.src = task.dataset.openArtwork;
+        taskArtworkImage.alt = '';
+        task.append(taskArtworkImage);
       }
       task.setAttribute('aria-label', 'Show ' + title + ' window');
       windowLayer.append(portfolioWindow);
