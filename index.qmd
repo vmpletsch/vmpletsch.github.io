@@ -70,8 +70,8 @@ format:
   .alt-task-label { flex: 0 0 240px; height: 38px; white-space: nowrap; }
   .alt-window-tasks { align-items: center; align-self: stretch; display: flex; gap: 5px; min-width: 0; overflow-x: auto; padding-left: 6px; }
   .alt-window-task { background: #c9c5bf; border: 2px outset #fff; color: #2d2330; cursor: none; font-family: monospace; font-size: clamp(8px, .75vw, 11px); font-weight: 900; max-width: min(150px, 22vw); overflow: hidden; padding: 4px 8px; text-overflow: ellipsis; white-space: nowrap; }
-  .alt-window-task.is-about-task, .alt-window-task.is-about-task.is-active, .alt-window-task.is-projects-task, .alt-window-task.is-projects-task.is-active, .alt-window-task.is-resume-task, .alt-window-task.is-resume-task.is-active { align-self: stretch; background: transparent; border: 0; box-sizing: border-box; flex: 0 0 120px; max-width: 120px; min-width: 120px; padding: 0; }
-  .alt-window-task.is-about-task img, .alt-window-task.is-projects-task img, .alt-window-task.is-resume-task img { display: block; height: 38px; image-rendering: pixelated; width: 120px; }
+  .alt-window-task[data-open-artwork], .alt-window-task[data-open-artwork].is-active { align-self: stretch; background: transparent; border: 0; box-sizing: border-box; flex: 0 0 120px; max-width: 120px; min-width: 120px; padding: 0; }
+  .alt-window-task[data-open-artwork] img { display: block; height: 38px; image-rendering: pixelated; width: 120px; }
   .alt-window-task.is-active { background: #e5c6df; border-style: inset; }
   .alt-desktop-boot-loader { display: grid; inset: 0; place-items: center; pointer-events: none; position: absolute; z-index: 3; }
   .alt-hourglass { display: block; height: 32px; image-rendering: pixelated; width: 32px; }
@@ -495,15 +495,15 @@ format:
       task.type = 'button';
       task.dataset.windowUrl = url;
       task.textContent = title;
-      const taskArtwork = title === 'About Me'
-        ? { closed: 'images/ux-dashboard/aboutme_closed.png', cssClass: 'is-about-task', open: 'images/ux-dashboard/aboutme_open.png' }
-        : title === 'Projects'
-          ? { closed: 'images/ux-dashboard/projects_closed.png', cssClass: 'is-projects-task', open: 'images/ux-dashboard/projects_open.png' }
-          : title === 'Resume & Experience'
-            ? { closed: 'images/ux-dashboard/resume_closed.png', cssClass: 'is-resume-task', open: 'images/ux-dashboard/resume_open.png' }
-            : null;
+      const taskArtworkByTitle = {
+        'About Me': { closed: 'images/ux-dashboard/aboutme_closed.png', open: 'images/ux-dashboard/aboutme_open.png' },
+        'Presentations': { closed: 'images/ux-dashboard/presentation_closed.png', open: 'images/ux-dashboard/presentation_open.png' },
+        'Projects': { closed: 'images/ux-dashboard/projects_closed.png', open: 'images/ux-dashboard/projects_open.png' },
+        'Resume & Experience': { closed: 'images/ux-dashboard/resume_closed.png', open: 'images/ux-dashboard/resume_open.png' },
+        'Writing Samples': { closed: 'images/ux-dashboard/writing_closed.png', open: 'images/ux-dashboard/writing_open.png' }
+      };
+      const taskArtwork = taskArtworkByTitle[title];
       if (taskArtwork) {
-        task.classList.add(taskArtwork.cssClass);
         task.dataset.openArtwork = taskArtwork.open;
         task.dataset.closedArtwork = taskArtwork.closed;
         task.textContent = '';
