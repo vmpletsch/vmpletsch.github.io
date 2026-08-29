@@ -70,7 +70,8 @@ format:
   .alt-task-label { flex: 0 0 240px; height: 38px; white-space: nowrap; }
   .alt-window-tasks { align-items: center; align-self: stretch; display: flex; gap: 5px; min-width: 0; overflow-x: auto; padding-left: 6px; }
   .alt-window-task { background: #c9c5bf; border: 2px outset #fff; color: #2d2330; cursor: none; font-family: monospace; font-size: clamp(8px, .75vw, 11px); font-weight: 900; max-width: min(150px, 22vw); overflow: hidden; padding: 4px 8px; text-overflow: ellipsis; white-space: nowrap; }
-  .alt-window-task.is-about-task { align-self: stretch; box-sizing: border-box; flex: 0 0 120px; font-size: clamp(10px, .9vw, 13px); justify-content: center; max-width: 120px; min-width: 120px; padding: 0 6px; }
+  .alt-window-task.is-about-task, .alt-window-task.is-about-task.is-active { align-self: stretch; background: transparent; border: 0; box-sizing: border-box; flex: 0 0 120px; max-width: 120px; min-width: 120px; padding: 0; }
+  .alt-window-task.is-about-task img { display: block; height: 38px; image-rendering: pixelated; width: 120px; }
   .alt-window-task.is-active { background: #e5c6df; border-style: inset; }
   .alt-desktop-boot-loader { display: grid; inset: 0; place-items: center; pointer-events: none; position: absolute; z-index: 3; }
   .alt-hourglass { display: block; height: 32px; image-rendering: pixelated; width: 32px; }
@@ -349,6 +350,7 @@ format:
       if (!entry) return;
       entry.window.hidden = true;
       entry.task.classList.remove('is-active');
+      updateWindowTaskArtwork(entry, false);
       status.textContent = entry.title + ' minimized to the taskbar.';
     }
 
@@ -356,8 +358,15 @@ format:
       const entry = openWindows.get(url);
       if (!entry) return;
       entry.window.hidden = false;
+      updateWindowTaskArtwork(entry, true);
       focusWindow(entry.window);
       status.textContent = entry.title + ' window restored.';
+    }
+
+    function updateWindowTaskArtwork(entry, isOpen) {
+      if (!entry || !entry.task.classList.contains('is-about-task')) return;
+      const artwork = entry.task.querySelector('img');
+      if (artwork) artwork.src = isOpen ? entry.task.dataset.openArtwork : entry.task.dataset.closedArtwork;
     }
 
     function toggleMaximize(portfolioWindow) {
@@ -486,7 +495,16 @@ format:
       task.type = 'button';
       task.dataset.windowUrl = url;
       task.textContent = title;
-      if (title === 'About Me') task.classList.add('is-about-task');
+      if (title === 'About Me') {
+        task.classList.add('is-about-task');
+        task.dataset.openArtwork = 'images/ux-dashboard/aboutme_open.png';
+        task.dataset.closedArtwork = 'images/ux-dashboard/aboutme_closed.png';
+        task.textContent = '';
+        const taskArtwork = document.createElement('img');
+        taskArtwork.src = task.dataset.openArtwork;
+        taskArtwork.alt = '';
+        task.append(taskArtwork);
+      }
       task.setAttribute('aria-label', 'Show ' + title + ' window');
       windowLayer.append(portfolioWindow);
       windowTasks.append(task);
