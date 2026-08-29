@@ -472,36 +472,36 @@ ul.task-list li input[type="checkbox"] {
 
     async function typePostLine(text, speed) {
       const line = addPostLine();
-      await typeInto(line, text, speed || 24);
+      await typeInto(line, text, speed || 13);
       return line;
     }
 
     async function runMemoryTest() {
       const line = addPostLine();
-      await typeInto(line, 'Memory Test: ', 24);
+      await typeInto(line, 'Memory Test: ', 13);
       const target = 1048576;
       const steps = 32;
       for (let step = 0; step <= steps; step += 1) {
         const amount = Math.round((target / steps) * step);
         line.textContent = 'Memory Test: ' + String(amount).padStart(7, ' ') + 'K';
-        await wait(96);
+        await wait(52);
       }
-      await wait(650);
-      await typeInto(line, ' OK', 100);
+      await wait(350);
+      await typeInto(line, ' OK', 55);
     }
 
     async function typeDeviceCheck(prefix, result) {
       const line = addPostLine();
-      await typeInto(line, prefix, 18);
+      await typeInto(line, prefix, 10);
       const dots = document.createElement('span');
       dots.className = 'alt-terminal-ellipsis';
       line.append(dots);
       for (let tick = 0; tick < 8; tick += 1) {
         dots.textContent = '.'.repeat((tick % 3) + 1);
-        await wait(200);
+        await wait(105);
       }
       dots.textContent = '...';
-      await typeInto(line, result, 20);
+      await typeInto(line, result, 11);
     }
 
     async function startBoot() {
@@ -510,41 +510,41 @@ ul.task-list li input[type="checkbox"] {
       powerOn.disabled = true;
       powerOn.textContent = 'Starting…';
       playBootChime();
-      await wait(260);
+      await wait(120);
       bootPower.hidden = true;
       postScreen.hidden = false;
       postLines.replaceChildren();
 
-      await typePostLine('VERONICA V-486 BIOS v1.04', 25);
-      await typePostLine('Copyright (C) 1998-2026 Veronica Pletsch', 23);
+      await typePostLine('VERONICA V-486 BIOS v1.04', 14);
+      await typePostLine('Copyright (C) 1998-2026 Veronica Pletsch', 13);
       await typePostLine('', 1);
-      await typePostLine('VP-486 CPU at 2500 MHz, 4 Processor(s)', 24);
+      await typePostLine('VP-486 CPU at 2500 MHz, 4 Processor(s)', 13);
       await runMemoryTest();
-      await wait(900);
+      await wait(500);
       await typePostLine('', 1);
-      await typePostLine('Portfolio Plug and Play ROM Extension v1.0.4', 18);
+      await typePostLine('Portfolio Plug and Play ROM Extension v1.0.4', 10);
       await typeDeviceCheck('  Detecting Project Drive    ', ' WORKS_1998');
       await typeDeviceCheck('  Detecting Personal Storage ', ' PRESENT');
       await typeDeviceCheck('  Initializing Desktop Shell ', ' READY');
-      await typePostLine('Booting from C:\\', 25);
-      await wait(1000);
+      await typePostLine('Booting from C:\\', 14);
+      await wait(550);
 
       postScreen.hidden = true;
-      await wait(450);
+      await wait(250);
       diagnosticScreen.hidden = false;
-      await wait(3200);
+      await wait(1700);
       diagnosticScreen.hidden = true;
-      await wait(800);
+      await wait(400);
 
       boot.classList.add('is-complete');
-      await wait(520);
+      await wait(280);
       setState('desktop-background');
       desktop.classList.add('is-ready');
-      await wait(2200);
+      await wait(1200);
       setState('desktop-taskbar');
-      await wait(1000);
+      await wait(550);
       setState('desktop-loader');
-      await wait(3500);
+      await wait(1800);
       setState('message');
     }
 
