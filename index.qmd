@@ -53,7 +53,8 @@ format:
   .alt-portfolio-window { background: #d6d2ca; border: 2px solid #20151e; box-shadow: 4px 4px 0 rgba(30, 21, 29, .48), inset 1px 1px #fff, inset -1px -1px #706b70; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; min-height: min(330px, 58vh); min-width: min(360px, 72vw); overflow: hidden; pointer-events: auto; position: absolute; resize: both; }
   .alt-portfolio-window.is-active { box-shadow: 5px 5px 0 rgba(30, 21, 29, .56), inset 1px 1px #fff, inset -1px -1px #706b70; }
   .alt-portfolio-window.is-about-window .alt-window-titlebar { font-size: clamp(15px, 1.25vw, 20px); min-height: 36px; }
-  .alt-window-titlebar { align-items: center; background: linear-gradient(90deg, #a84b85, #6d3f72); color: #fff; cursor: move; display: flex; font-family: monospace; font-size: clamp(9px, .9vw, 13px); font-weight: 900; gap: 7px; justify-content: space-between; min-height: 28px; padding: 3px 4px 3px 8px; user-select: none; }
+  .alt-window-titlebar { align-items: center; background: linear-gradient(90deg, #a84b85, #6d3f72); color: #fff; cursor: move; display: flex; font-family: monospace; font-size: clamp(9px, .9vw, 13px); font-weight: 900; gap: 7px; justify-content: space-between; min-height: 28px; padding: 3px 4px 3px 8px; touch-action: none; user-select: none; }
+  .alt-window-titlebar.is-dragging { filter: brightness(1.08); }
   .alt-window-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .alt-window-controls { display: flex; flex: 0 0 auto; gap: 3px; }
   .alt-window-control { align-items: center; background: #d6d2ca; border: 1px outset #fff; color: #251928; display: grid; font-family: monospace; font-size: 14px; font-weight: 900; height: 20px; line-height: 1; padding: 0; place-items: center; width: 22px; }
@@ -374,6 +375,53 @@ format:
       focusWindow(portfolioWindow);
     }
 
+    function makeWindowDraggable(portfolioWindow, titlebar) {
+      let drag = null;
+
+      function finishDrag(event) {
+        if (!drag || event.pointerId !== drag.pointerId) return;
+        const pointerId = drag.pointerId;
+        drag = null;
+        titlebar.classList.remove('is-dragging');
+        if (titlebar.hasPointerCapture && titlebar.hasPointerCapture(pointerId)) titlebar.releasePointerCapture(pointerId);
+      }
+
+      titlebar.addEventListener('pointerdown', function (event) {
+        if (event.isPrimary === false || (event.pointerType === 'mouse' && event.button !== 0)) return;
+        if (event.target.closest('.alt-window-controls') || portfolioWindow.classList.contains('is-maximized')) return;
+        const layerBounds = windowLayer.getBoundingClientRect();
+        const windowBounds = portfolioWindow.getBoundingClientRect();
+        drag = {
+          left: windowBounds.left - layerBounds.left,
+          pointerId: event.pointerId,
+          startX: event.clientX,
+          startY: event.clientY,
+          top: windowBounds.top - layerBounds.top
+        };
+        titlebar.classList.add('is-dragging');
+        try { titlebar.setPointerCapture(event.pointerId); } catch (error) { /* Synthetic and assistive pointer events may not support capture. */ }
+        focusWindow(portfolioWindow);
+        event.preventDefault();
+      });
+
+      titlebar.addEventListener('pointermove', function (event) {
+        if (!drag || event.pointerId !== drag.pointerId) return;
+        const layerBounds = windowLayer.getBoundingClientRect();
+        const windowBounds = portfolioWindow.getBoundingClientRect();
+        const maxLeft = Math.max(0, layerBounds.width - Math.min(windowBounds.width, layerBounds.width));
+        const maxTop = Math.max(0, layerBounds.height - Math.min(windowBounds.height, layerBounds.height));
+        const nextLeft = Math.min(maxLeft, Math.max(0, drag.left + event.clientX - drag.startX));
+        const nextTop = Math.min(maxTop, Math.max(0, drag.top + event.clientY - drag.startY));
+        portfolioWindow.style.left = nextLeft + 'px';
+        portfolioWindow.style.top = nextTop + 'px';
+        event.preventDefault();
+      });
+
+      titlebar.addEventListener('pointerup', finishDrag);
+      titlebar.addEventListener('pointercancel', finishDrag);
+      titlebar.addEventListener('lostpointercapture', finishDrag);
+    }
+
     function openPortfolioWindow(link) {
       const url = link.href;
       const title = link.dataset.windowTitle || link.textContent.trim();
@@ -452,6 +500,7 @@ format:
         else focusWindow(portfolioWindow);
       });
       portfolioWindow.addEventListener('pointerdown', function () { focusWindow(portfolioWindow); });
+      makeWindowDraggable(portfolioWindow, titlebar);
       frame.addEventListener('load', function () {
         try { frame.contentWindow.addEventListener('pointerdown', function () { focusWindow(portfolioWindow); }); } catch (error) { /* The fallback link remains available if a page cannot be framed. */ }
       });
