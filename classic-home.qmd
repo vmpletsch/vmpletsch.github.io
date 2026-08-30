@@ -4,7 +4,7 @@ description: "Portfolio of Veronica Pletsch, a data scientist, social science re
 page-layout: full
 toc: false
 title-block: false
-format: 
+format:
   html:
     css: custom.css
 ---
@@ -116,7 +116,7 @@ On a lighter note, when I'm not giving myself musculoskeletal issues and heart p
 
 Anyway, while you're here, please explore my recent research projects, writing samples, and while you're at it, take a PDF copy of my resume as a souvenir of your trip here.
 
-Thanks for stopping by! 
+Thanks for stopping by!
 
 ```{=html}
 <div class="about-photo-row">
