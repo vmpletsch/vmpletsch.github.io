@@ -42,7 +42,7 @@ format:
   .alt-diagnostic-list .alt-diagnostic-rule { border-top: 3px solid #efefef; margin: 13px 0 7px; max-width: 1100px; }
   .alt-diagnostic-device { display: grid; grid-template-columns: 6ch 8ch 9ch 1fr; }
   .alt-desktop-icons, .alt-layer { inset: 0; position: absolute; }
-  .alt-desktop-icons { align-content: start; display: grid; gap: 20px 28px; grid-template-columns: repeat(2, clamp(68px, 7.8vw, 100px)); grid-template-rows: repeat(4, 86px); inset: auto; left: 3vw; position: absolute; top: 4vh; z-index: 1; }
+  .alt-desktop-icons { align-content: start; display: grid; gap: 20px 28px; grid-template-columns: repeat(2, clamp(68px, 7.8vw, 100px)); grid-template-rows: repeat(4, 86px); inset: auto; bottom: 48px; left: 3vw; position: absolute; top: auto; z-index: 1; }
   .alt-icon { align-items: center; color: #fff4ff; display: flex; flex-direction: column; font-family: monospace; font-size: clamp(8px, .78vw, 13px); font-weight: 900; gap: 4px; left: 3vw; line-height: 1.08; position: absolute; text-align: center; text-decoration: none !important; text-shadow: 1px 1px 0 #14043f, 0 0 6px rgba(100,246,255,.72); width: clamp(68px, 7.8vw, 100px); }
   .alt-icon img { image-rendering: pixelated; max-height: 52px; max-width: 60px; object-fit: contain; }
   .alt-icon span { text-decoration: none !important; }
