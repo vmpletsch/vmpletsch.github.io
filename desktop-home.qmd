@@ -168,7 +168,7 @@ format:
   </div>
 
   <div class="alt-desktop-boot-loader" hidden role="status" aria-label="Loading desktop"><img class="alt-hourglass" src="images/ux-dashboard/hourglass.gif" alt="" aria-hidden="true"></div>
-  <div class="alt-taskbar" hidden><button class="alt-start" type="button" aria-label="Home"><img src="images/ux-dashboard/homebutton.png" alt=""></button><span class="alt-task-label"><img src="images/ux-dashboard/veronicafooter.png" alt="Veronica Pletsch"></span><div class="alt-window-tasks" aria-label="Open portfolio windows"></div><a class="alt-exit-retro" href="classic-home.html" aria-label="Exit out of retro desktop"><span aria-hidden="true">→</span><span>Exit out of retro desktop</span></a></div>
+  <div class="alt-taskbar" hidden><button class="alt-start" type="button" aria-label="Home"><img src="images/ux-dashboard/homebutton.png" alt=""></button><span class="alt-task-label"><img src="images/ux-dashboard/veronicafooter.png" alt="Veronica Pletsch"></span><div class="alt-window-tasks" aria-label="Open portfolio windows"></div><a class="alt-exit-retro" href="index.html" aria-label="Exit out of retro desktop"><span aria-hidden="true">→</span><span>Exit out of retro desktop</span></a></div>
   <img id="alt-pixel-cursor" src="images/ux-dashboard/pink_arrowcursor.png" data-arrow="images/ux-dashboard/pink_arrowcursor.png" data-hand="images/ux-dashboard/hand_cursor.png" alt="" aria-hidden="true">
 </section>
 
