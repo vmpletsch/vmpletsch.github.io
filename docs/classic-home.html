@@ -267,7 +267,16 @@ ul.task-list li input[type="checkbox"] {
     outline-offset: 3px;
   }
 </style>
-<p><a class="classic-mode-switch" href="index.html" aria-label="Switch to retro desktop"><span aria-hidden="true">←</span><span>Switch to retro desktop</span></a> <link rel="stylesheet" href="custom.css?v=20260825-7"></p>
+<p><a class="classic-mode-switch" href="index.html" aria-label="Switch to retro desktop"><span aria-hidden="true">←</span><span>Switch to retro desktop</span></a></p>
+<script>
+  (function () {
+    const classicBrand = document.querySelector('#quarto-header .navbar-brand');
+    if (!classicBrand) return;
+    classicBrand.href = 'classic-home.html';
+    classicBrand.setAttribute('aria-label', 'Return to the classic homepage');
+  }());
+</script>
+<p><link rel="stylesheet" href="custom.css?v=20260825-7"></p>
 <div style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; max-width: 800px; margin: 0 auto; width: 100%;">
 <h1 class="tracking-in-expand" style="font-size: 100px; margin-bottom: 0px; line-height: 1; font-family: 'DM Serif Display', serif; text-align: center; width: 100%;">
 Veronica Pletsch

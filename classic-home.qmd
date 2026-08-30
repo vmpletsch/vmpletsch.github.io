@@ -48,6 +48,18 @@ format:
 </style>
 
 <a class="classic-mode-switch" href="index.html" aria-label="Switch to retro desktop"><span aria-hidden="true">←</span><span>Switch to retro desktop</span></a>
+
+```{=html}
+<script>
+  (function () {
+    const classicBrand = document.querySelector('#quarto-header .navbar-brand');
+    if (!classicBrand) return;
+    classicBrand.href = 'classic-home.html';
+    classicBrand.setAttribute('aria-label', 'Return to the classic homepage');
+  }());
+</script>
+```
+
 <link rel="stylesheet" href="custom.css?v=20260825-7">
 
 ::: {style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; max-width: 800px; margin: 0 auto; width: 100%;"}
