@@ -1,8 +1,8 @@
 ---
-title: "STEREOTYPING MACHINES? A COMPUTATIONAL SENTIMENT ANALYSIS OF A.I. IN U.S. NEWS MEDIA (2000–2024)"
+title: "Stereotyping Machines? A Computational Sentiment Analysis of A.I. in U.S. News Media (2000–2024)"
 categories: ["quantitative analysis"]
 date: "2026-08-04"
-image: "../../images/veronica-pletsch-profile.jpg"
+image: "../../previews/stereotyping-machines-preview.png"
 toc: false
 page-layout: full
 ---
