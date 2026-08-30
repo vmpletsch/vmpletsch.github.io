@@ -1,5 +1,5 @@
 ---
-title: "Stereotyping Machines? A Computational Sentiment Analysis of A.I. in U.S. News Media (2000–2024)"
+title: "Stereotyping Machines? A Computational Sentiment Analysis Of A.I. In U.S. News Media (2000–2024)"
 categories: ["quantitative analysis"]
 date: "2026-08-04"
 image: "../../previews/stereotyping-machines-preview.png"
