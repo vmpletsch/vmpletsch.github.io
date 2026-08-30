@@ -1,0 +1,15 @@
+---
+title: "Web Portfolio"
+description: "An interactive two-mode professional portfolio experience that combines a retro desktop interface with a classic navigation path."
+categories: ["UI/UX"]
+date: "2026-08-30"
+image: "../../previews/web-portfolio-placeholder.svg"
+toc: false
+page-layout: full
+---
+
+An interactive web portfolio that gives visitors two ways to explore the same body of work: an immersive retro desktop interface and a familiar classic portfolio layout.
+
+**Focus:** UI/UX design, interaction design, information architecture, and responsive portfolio navigation.
+
+Project preview and case-study materials coming soon.
