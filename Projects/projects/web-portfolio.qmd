@@ -3,7 +3,7 @@ title: "Web Portfolio"
 description: "An interactive two-mode professional portfolio experience that combines a retro desktop interface with a classic navigation path."
 categories: ["UI/UX"]
 date: "2026-08-30"
-image: "../../previews/web-portfolio-placeholder.svg"
+image: "../../previews/web-portfolio-preview.png"
 toc: false
 page-layout: full
 ---
