@@ -68,11 +68,15 @@ format:
   .alt-start img { transition: filter 70ms linear, transform 70ms steps(1, end); }
   .alt-start:active img, .alt-start.is-pressed img { filter: brightness(.79); transform: translate(2px, 2px); }
   .alt-task-label { flex: 0 0 240px; height: 38px; white-space: nowrap; }
-  .alt-window-tasks { align-items: center; align-self: stretch; display: flex; gap: 5px; min-width: 0; overflow-x: auto; padding-left: 6px; }
+  .alt-window-tasks { align-items: center; align-self: stretch; display: flex; flex: 1 1 auto; gap: 5px; min-width: 0; overflow-x: auto; padding-left: 6px; }
   .alt-window-task { background: #c9c5bf; border: 2px outset #fff; color: #2d2330; cursor: none; font-family: monospace; font-size: clamp(8px, .75vw, 11px); font-weight: 900; max-width: min(150px, 22vw); overflow: hidden; padding: 4px 8px; text-overflow: ellipsis; white-space: nowrap; }
   .alt-window-task[data-open-artwork], .alt-window-task[data-open-artwork].is-active { align-self: stretch; background: transparent; border: 0; box-sizing: border-box; flex: 0 0 120px; max-width: 120px; min-width: 120px; padding: 0; }
   .alt-window-task[data-open-artwork] img { display: block; height: 38px; image-rendering: pixelated; width: 120px; }
   .alt-window-task.is-active { background: #e5c6df; border-style: inset; }
+  .alt-exit-retro { align-items: center; background: #c9c5bf; border: 2px outset #fff; color: #2d2330; cursor: none; display: inline-flex; flex: 0 0 auto; font-family: monospace; font-size: clamp(8px, .76vw, 11px); font-weight: 900; gap: 4px; height: 30px; justify-content: center; margin: 3px 6px 3px 8px; padding: 0 9px; text-decoration: none !important; text-shadow: none; white-space: nowrap; }
+  .alt-exit-retro:hover, .alt-exit-retro:focus-visible { background: #ead0e8; color: #2d2330; }
+  .alt-exit-retro:active { border-style: inset; transform: translate(1px, 1px); }
+  .alt-exit-retro:focus-visible { outline: 2px solid #fff; outline-offset: -4px; }
   .alt-desktop-boot-loader { display: grid; inset: 0; place-items: center; pointer-events: none; position: absolute; z-index: 3; }
   .alt-hourglass { display: block; height: 32px; image-rendering: pixelated; width: 32px; }
   .alt-message, .alt-welcome, .alt-loading { align-items: center; display: grid; justify-items: center; z-index: 3; }
@@ -164,7 +168,7 @@ format:
   </div>
 
   <div class="alt-desktop-boot-loader" hidden role="status" aria-label="Loading desktop"><img class="alt-hourglass" src="images/ux-dashboard/hourglass.gif" alt="" aria-hidden="true"></div>
-  <div class="alt-taskbar" hidden><button class="alt-start" type="button" aria-label="Home"><img src="images/ux-dashboard/homebutton.png" alt=""></button><span class="alt-task-label"><img src="images/ux-dashboard/veronicafooter.png" alt="Veronica Pletsch"></span><div class="alt-window-tasks" aria-label="Open portfolio windows"></div></div>
+  <div class="alt-taskbar" hidden><button class="alt-start" type="button" aria-label="Home"><img src="images/ux-dashboard/homebutton.png" alt=""></button><span class="alt-task-label"><img src="images/ux-dashboard/veronicafooter.png" alt="Veronica Pletsch"></span><div class="alt-window-tasks" aria-label="Open portfolio windows"></div><a class="alt-exit-retro" href="classic-home.html" aria-label="Exit out of retro desktop"><span aria-hidden="true">→</span><span>Exit out of retro desktop</span></a></div>
   <img id="alt-pixel-cursor" src="images/ux-dashboard/pink_arrowcursor.png" data-arrow="images/ux-dashboard/pink_arrowcursor.png" data-hand="images/ux-dashboard/hand_cursor.png" alt="" aria-hidden="true">
 </section>
 
